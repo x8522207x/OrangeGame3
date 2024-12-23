@@ -125,107 +125,90 @@
 } */
 
 .nav_side {
-    align-items: center;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    pointer-events: none;
+    overflow: hidden;
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 16px;
+    top: calc(50% + 40px);
+    transform: translate3d(0, -50%, 0);
     z-index: 10;
 }
 
-.nav_side:after,
-.nav_side:before {
-    content: "";
-    height: 100%;
-    position: absolute;
+.nav_side>div {
+    transition: transform .3s cubic-bezier(.33, 1, .68, 1);
+    width: 100%;
 }
 
-.nav_side:before {
-    background-color: #fff3;
-    right: 24px;
-    width: 1px;
-}
-
-.nav_side ol {
+.nav_side>div ol {
     display: flex;
     flex-direction: column;
+    font-family: WarsOfPrasia, serif;
     position: relative;
     transition: opacity .3s ease;
 }
 
-.nav_side ol li {
+.nav_side>div ol li {
     align-items: center;
     box-sizing: border-box;
+    cursor: pointer;
     display: flex;
     height: 40px;
+    position: relative;
     z-index: 2;
 }
 
-.nav_side ol li.active.depth_1 button {
+.nav_side>div ol li.active button {
     color: #e6e6e6;
-    text-shadow: 0 0 5px #d68c3d, 0 0 10px #d68c3d, 0 0 10px #d68c3d;
+    text-shadow: 0 0 5px #3dc6d6, 0 0 10px #3dc6d6, 0 0 10px #3dc6d6;
 }
 
-.nav_side ol li.depth_1 button {
-    font-family: "source-han-sans-cjk-tc", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-.nav_side ol li button {
+.nav_side>div ol li button {
     align-items: center;
     box-sizing: border-box;
-    color: #ffffff80;
+    color: #e7eef0;
     display: flex;
-    font-size: 18px;
+    font-family: "Noto Serif TC", serif;
+    font-size: 17px;
     line-height: 1;
     margin-left: auto;
-    pointer-events: all;
     position: relative;
     text-align: right;
-    transition: background .3s ease, color .2s ease, font-weight .3s ease;
+    transition: background .3s ease, color .2s ease;
     white-space: nowrap;
 }
 
-.nav_side ol li.point button:after {
+.nav_side>div ol li.active button:after {
     opacity: 1;
-    transform: translate(-1px);
+    transform: translate(0);
 }
 
-.nav_side ol li button:after {
-    background-image: url(../img/icon/side_ornate_active.png);
+.nav_side>div ol li button:after {
+    background-image: url(../img/icon/nav_active.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
+    box-sizing: border-box;
     content: "";
     display: inline-block;
-    filter: drop-shadow(0 0 10px #d68c3d);
-    height: 15px;
-    margin-left: 10px;
-    margin-right: 20px;
+    height: 28px;
+    margin-left: 8px;
     opacity: 0;
+    position: relative;
     transform: translate(10px);
-    transition: opacity .3s cubic-bezier(.33, 1, .68, 1), transform .3s cubic-bezier(.33, 1, .68, 1), background-image .3s ease;
-    width: 15px;
+    transition: all .3s cubic-bezier(.33, 1, .68, 1);
+    width: 29px;
 }
 
-.nav_side ol li.depth_2 button {
-    color: #e6e6e6;
-    font-size: 20px;
-    font-family: "source-han-sans-cjk-tc", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-
-.nav_side ol li.active.depth_2 button {
-    text-shadow: 0 0 5px #d68c3d, 0 0 10px #d68c3d, 0 0 10px #d68c3d;
-    font-weight: 400;
+.nav_side>div ol li:after {
+    color: #25a5c5;
+    content: ".";
+    display: inline-block;
+    font-size: 21px;
+    position: absolute;
+    right: 7px;
+    text-shadow: 0 0 5px #3dc6d6, 0 0 10px #3dc6d6, 0 0 10px #3dc6d6;
+    top: 0;
 }
 
 .section-pages.swiper-vertical {
@@ -538,15 +521,6 @@ section.section_main .content .scroll {
     width: 101px;
 }
 
-
-.section_main .content .detail {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: -10px;
-}
-
 .section_season .visual .bg {
     background-image: url(../img/page2/p1_bg.jpg);
     background-position: 50% 50%;
@@ -564,68 +538,61 @@ section.section_main .content .scroll {
     width: 468px;
 }
 
-.section_season .content .content_wrap .detail {
+.section_season .content .content_wrap div {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-    top: -5px;
+    justify-self: center;
+    align-self: center;
 }
 
-.section_season .content .content_wrap .detail .reward1 {
+.section_season .content .content_wrap .reward1 {
     background-image: url(../img/page2/p7_reward1.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 336px;
-    left: calc(50% - 511px);
-    top: calc(50% - 222px);
-    width: 399px;
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
+    max-width: 300px;
+    max-height: 300px;
 }
 
-.section_season .content .content_wrap .detail .reward2 {
-    background-image: url(../img/page2/p7_reward2.png);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 336px;
-    left: calc(50% - 511px);
-    top: calc(50% - 222px);
-    width: 399px;
+.section_season .content .content_wrap .reward2 {
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
+    max-width: 300px;
+    max-height: 300px;
 }
 
-.section_season .content .content_wrap .detail .reward3 {
+.section_season .content .content_wrap .reward3 {
     background-image: url(../img/page2/p7_reward3.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 336px;
-    left: calc(50% - 511px);
-    top: calc(50% - 222px);
-    width: 399px;
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
+    max-width: 300px;
+    max-height: 300px;
 }
 
-.section_season .content .content_wrap .detail .reward4 {
+.section_season .content .content_wrap .reward4 {
     background-image: url(../img/page2/p7_reward4.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 336px;
-    left: calc(50% - 511px);
-    top: calc(50% - 222px);
-    width: 399px;
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
+    max-width: 300px;
+    max-height: 300px;
 }
 
-.section_season .content .content_wrap .detail .reward5 {
+.section_season .content .content_wrap .reward5 {
     background-image: url(../img/page2/p7_reward5.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 336px;
-    left: calc(50% - 511px);
-    top: calc(50% - 222px);
-    width: 399px;
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .section_newrealm .content .header .title {
@@ -648,13 +615,6 @@ section.section_main .content .scroll {
 
 .section_newrealm .content .sub_content .content_wrap {
     margin: auto;
-}
-
-.section_newrealm .content .detail {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
 }
 
 .detail-link,
@@ -1167,6 +1127,23 @@ section.section_dungeon .content {
         width: 51px;
     }
 
+    .section_season .content .header .title {
+        height: 78px;
+        margin-top: -17px;
+        width: 234px;
+    }
+
+    .section_season .content .content_wrap>div {
+        flex-direction: column;
+    }
+
+    .section_season .content .content_wrap>div .swiper-slide {
+        height: calc(100vw / 3);
+        width: calc(100vw / 3);
+        max-width: 300px;
+        max-height: 300px;
+    }
+
     .section_newrealm .visual {
         background-image: url(../img/page3/s8_bg_m.jpg);
         background-position: 50% 50%;
@@ -1402,16 +1379,6 @@ section.section_dungeon .content {
     .section_main .content .header .title {
         height: 230px;
         width: 733px;
-    }
-
-    .section_main .content .detail .date {
-        font-size: 30px;
-    }
-
-    .section_main .content .detail .video-open {
-        height: 117px;
-        margin-top: 58px;
-        width: 113px;
     }
 
     .section_main .content .scroll {

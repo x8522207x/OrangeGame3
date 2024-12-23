@@ -149,53 +149,14 @@ $(document).ready(() => {
                     $('.swiper-slide-page').removeClass('scrollable');
                     $('.gotop').removeClass('show');
                     $('.UNI-footer').css('display', 'none');
+                    $('.swiper-slide-page')[swiper.realIndex].classList.add('scrollable');
+                    $('.depth_1')[swiper.realIndex].classList.add('active');
+                    $('.depth_1')[swiper.realIndex].classList.add('point');
+                    if (swiper.realIndex !== 0) {
+                        $('.gotop').addClass('show');
+                    }
 
-                    if (swiper.realIndex === 0) {
-                        $('.swiper-slide-page')[0].classList.add('scrollable');
-                        $('.depth_1')[0].classList.add('active');
-                        $('.depth_1')[0].classList.add('point');
-                    } else if (swiper.realIndex === 1) {
-                        $('.gotop').addClass('show');
-                        $('.swiper-slide-page')[1].classList.add('scrollable');
-                        $('.depth_1')[0].classList.add('active');
-                        $('.depth_2')[0].classList.add('active');
-                        $('.depth_2')[0].classList.add('point');
-                    } else if (swiper.realIndex === 2) {
-                        $('.gotop').addClass('show');
-                        $('.swiper-slide-page')[2].classList.add('scrollable');
-                        $('.depth_1')[0].classList.add('active');
-                        $('.depth_2')[1].classList.add('active');
-                        $('.depth_2')[1].classList.add('point');
-                    } else if (swiper.realIndex === 3) {
-                        $('.gotop').addClass('show');
-                        $('.swiper-slide-page')[3].classList.add('scrollable');
-                        $('.depth_1')[0].classList.add('active');
-                        $('.depth_2')[2].classList.add('active');
-                        $('.depth_2')[2].classList.add('point');
-                    } else if (swiper.realIndex === 4) {
-                        $('.gotop').addClass('show');
-                        $('.swiper-slide-page')[4].classList.add('scrollable');
-                        $('.depth_1')[0].classList.add('active');
-                        $('.depth_2')[3].classList.add('active');
-                        $('.depth_2')[3].classList.add('point');
-                    } else if (swiper.realIndex === 5) {
-                        $('.gotop').addClass('show');
-                        $('.swiper-slide-page')[5].classList.add('scrollable');
-                        $('.depth_1')[0].classList.add('active');
-                        $('.depth_2')[4].classList.add('active');
-                        $('.depth_2')[4].classList.add('point');
-                    } else if (swiper.realIndex === 6) {
-                        $('.gotop').addClass('show');
-                        $('.swiper-slide-page')[6].classList.add('scrollable');
-                        $('.depth_1')[0].classList.add('active');
-                        $('.depth_2')[5].classList.add('active');
-                        $('.depth_2')[5].classList.add('point');
-                    } else if (swiper.realIndex === 7) {
-                        $('.gotop').addClass('show');
-                        $('.swiper-slide-page')[7].classList.add('scrollable');
-                        $('.depth_1')[0].classList.add('active');
-                        $('.depth_2')[6].classList.add('active');
-                        $('.depth_2')[6].classList.add('point');
+                    if (swiper.realIndex === 7) {
                         $('.UNI-footer').css('display', 'block');
                     }
                 },
@@ -281,10 +242,16 @@ $(document).ready(() => {
 
     if ($(window).width() > 768) {
         pcSwiper();
+        $('.items .item.item1').on('click', () => {
+            openVideo("", "./img/page8/pc.mp4");
+        });
     } else {
         $('.event_gnb').toggleClass('type_default');
         $('.event_gnb').toggleClass('type_clear');
         mobileSwiper();
+        $('.section_soon .content button').on('click', () => {
+            openVideo("", "./img/page8/pc.mp4");
+        });
     }
     p6Swiper();
 });
@@ -331,16 +298,21 @@ const addAnimateClass = (arr) => {
     arr.forEach(ele => $(ele).addClass('animate'));
 };
 
-const openVideo = (video) => {
+const openVideo = (video, path) => {
     $('.plate_modal').toggleClass('-active');
     $('.modal').css('opacity', '1').css('visibility', 'inherit');
     $('.modal.type--youtube').toggleClass('hide');
     $('.modal_box_veil').toggleClass('-hide');
-    $('.modal_source').append(
-        `<iframe width="auto" height="auto" class="modal_youtube youtube--2"
+    if (video) {
+        $('.modal_source').append(
+            `<iframe width="auto" height="auto" class="modal_youtube youtube--2"
         src="https://www.youtube.com/embed/${video}?si=1_stAmmA1RL7LFrt"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen></iframe>`);
+    } else if (path) {
+        $('.modal_source').append(
+            `<video class="modal_youtube youtube--2" loop="" autoplay="" playsinline="" controls="" controlslist="nodownload" preload="metadata"><source src=${path}></video>`);
+    }
 };
