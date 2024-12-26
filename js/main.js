@@ -38,12 +38,12 @@ $(document).ready(() => {
         window.open("https://galaxy.beanfun.com/webapi/view/login/twp?redirect_url=https://warsofprasia.beanfun.com/Main");
     });
 
-    $('.detail_p1 .video_open').on('click', () => {
-        openVideo("_y8x_gah-_Y");
+    $('.section_main .content button').on('click', () => {
+        openVideo("", "../img/page8/pc.mp4");
     });
 
-    $('.subcontent .video_open').on('click', () => {
-        openVideo("3MKnWVeWpJw");
+    $('.section_soon .content button').on('click', () => {
+        openVideo("", "../img/page8/pc.mp4");
     });
 
     $('.modal_close').on('click', () => {
@@ -173,6 +173,65 @@ $(document).ready(() => {
         }
     };
 
+    const p2Child1Swiper = () => {
+        new Swiper('.nested-swiper-child1', {
+            direction: 'horizontal',
+            slidesPerView: 1,
+            mousewheel: {
+                releaseOnEdges: true,
+                enabled: false,
+            },
+            autoHeight: true,
+            speed: 1000,
+            nested: true,
+            loop: true,
+            passiveListeners: false,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: '.nested-swiper-child1 .swiper-button-next',
+                prevEl: '.nested-swiper-child1 .swiper-button-prev',
+            }
+        });
+    };
+
+    const p2Child2Swiper = () => {
+        new Swiper('.nested-swiper-child2', {
+            direction: 'horizontal',
+            slidesPerView: 1,
+            mousewheel: {
+                releaseOnEdges: true,
+                enabled: false,
+            },
+            autoHeight: true,
+            speed: 1000,
+            nested: true,
+            loop: true,
+            passiveListeners: false,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: '.nested-swiper-child2 .swiper-button-next',
+                prevEl: '.nested-swiper-child2 .swiper-button-prev',
+            },
+            on: {
+                init: (swiper) => {
+                    $('.progress1').on('click', () => {
+                        swiper.slideTo(0);
+                    });
+                    $('.progress2').on('click', () => {
+                        swiper.slideTo(1);
+                    });
+                    $('.progress3').on('click', () => {
+                        swiper.slideTo(2);
+                    });
+                },
+                slideChange: (swiper) => {
+                    $('[class*=progress]').removeClass('active');
+                    $(`.progress${swiper.realIndex + 1}`).toggleClass('active');
+                }
+            }
+        });
+    };
+
     const p6Swiper = () => {
         new Swiper('.nested-swiper', {
             direction: 'horizontal',
@@ -242,17 +301,13 @@ $(document).ready(() => {
 
     if ($(window).width() > 768) {
         pcSwiper();
-        $('.items .item.item1').on('click', () => {
-            openVideo("", "./img/page8/pc.mp4");
-        });
     } else {
         $('.event_gnb').toggleClass('type_default');
         $('.event_gnb').toggleClass('type_clear');
         mobileSwiper();
-        $('.section_soon .content button').on('click', () => {
-            openVideo("", "./img/page8/pc.mp4");
-        });
+        p2Child2Swiper();
     }
+    p2Child1Swiper();
     p6Swiper();
 });
 

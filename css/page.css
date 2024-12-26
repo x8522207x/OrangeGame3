@@ -529,7 +529,7 @@ section.section_main .content .scroll {
 }
 
 .section_season .content .header .title {
-    background-image: url(../img/page3/s8_title.png);
+    background-image: url(../img/page2/p1_title.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -538,61 +538,154 @@ section.section_main .content .scroll {
     width: 468px;
 }
 
-.section_season .content .content_wrap div {
+.section_season .content .content_wrap>div {
     display: flex;
     justify-self: center;
     align-self: center;
 }
 
+.section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide,
+.section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide {
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
+    max-width: 350px;
+    max-height: 350px;
+    position: relative;
+}
+
+.section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active span,
+.section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active span {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_1 {
+    background-image: url(../img/page2/p1_block01.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_2 {
+    background-image: url(../img/page2/p1_block02\(目前為假圖\).png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_3 {
+    background-image: url(../img/page2/p1_block03.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_1 {
+    background-image: url(../img/page2/p1_block03.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_2 {
+    background-image: url(../img/page2/p1_block04.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_3 {
+    background-image: url(../img/page2/p1_block05.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span,
+.section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span {
+    display: inline-block;
+    filter: grayscale(1) brightness(.7) contrast(1.2);
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s ease;
+    width: 100%;
+}
+
+.section_season .reward2 .swiper-container .swiper-button-prev,
+.section_season .reward3 .swiper-container .swiper-button-prev {
+    left: 10%;
+    transform: scaleX(-1);
+}
+
+.section_season .reward2 .swiper-container .swiper-button-next,
+.section_season .reward2 .swiper-container .swiper-button-prev,
+.section_season .reward3 .swiper-container .swiper-button-next,
+.section_season .reward3 .swiper-container .swiper-button-prev {
+    color: #0000 !important;
+    filter: grayscale(.5) brightness(.8);
+    font-size: 0 !important;
+    height: 100px;
+    position: absolute;
+    top: calc(50% - 100px);
+    width: 70px;
+    z-index: 5;
+    -webkit-text-size-adjust: none;
+    background-image: url(../img/icon/right_arrow_m.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.section_season .reward2 .swiper-container .swiper-button-next:hover,
+.section_season .reward2 .swiper-container .swiper-button-prev:hover,
+.section_season .reward3 .swiper-container .swiper-button-next:hover,
+.section_season .reward3 .swiper-container .swiper-button-prev:hover {
+    filter: none;
+}
+
+.section_season .reward2 .swiper-container .swiper-button-next,
+.section_season .reward3 .swiper-container .swiper-button-next {
+    right: 10%;
+}
+
 .section_season .content .content_wrap .reward1 {
-    background-image: url(../img/page2/p7_reward1.png);
+    background-image: url(../img/page2/p1_block01.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: calc(100vw / 3);
-    width: calc(100vw / 3);
-    max-width: 300px;
-    max-height: 300px;
 }
 
-.section_season .content .content_wrap .reward2 {
+.section_season .content .content_wrap .reward1,
+.section_season .content .content_wrap .reward2,
+.section_season .content .content_wrap .visible_mobile.reward3,
+.section_season .content .content_wrap .visible_roomy .reward3,
+.section_season .content .content_wrap .reward4,
+.section_season .content .content_wrap .reward5 {
     height: calc(100vw / 3);
     width: calc(100vw / 3);
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 350px;
+    max-height: 350px;
 }
 
-.section_season .content .content_wrap .reward3 {
-    background-image: url(../img/page2/p7_reward3.png);
+.section_season .content .content_wrap .visible_roomy .reward3 {
+    background-image: url(../img/page2/p1_block03.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: calc(100vw / 3);
-    width: calc(100vw / 3);
-    max-width: 300px;
-    max-height: 300px;
 }
 
 .section_season .content .content_wrap .reward4 {
-    background-image: url(../img/page2/p7_reward4.png);
+    background-image: url(../img/page2/p1_block04.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: calc(100vw / 3);
-    width: calc(100vw / 3);
-    max-width: 300px;
-    max-height: 300px;
 }
 
 .section_season .content .content_wrap .reward5 {
-    background-image: url(../img/page2/p7_reward5.png);
+    background-image: url(../img/page2/p1_block05.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: calc(100vw / 3);
-    width: calc(100vw / 3);
-    max-width: 300px;
-    max-height: 300px;
 }
 
 .section_newrealm .content .header .title {
@@ -600,9 +693,18 @@ section.section_main .content .scroll {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 156px;
+    height: 125px;
     margin-top: 37px;
-    width: 468px;
+    width: 254px;
+}
+
+.section_newrealm .content .header .sub_title {
+    background-image: url(../img/page3/p2_subtitle.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 48px;
+    width: 481px;
 }
 
 .section_newrealm .content>*,
@@ -617,15 +719,24 @@ section.section_main .content .scroll {
     margin: auto;
 }
 
-.detail-link,
+.btn_div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 body .detail-link:hover {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
+    background-image: url(../img/icon/btn_hover.png);
 }
 
 .detail-link {
-    background-image: url(../img/page3/s2_button_link.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/icon/btn_link.png);
     color: #0000 !important;
     display: inline-block;
     font-size: 0 !important;
@@ -643,6 +754,15 @@ section.section_dungeon .content .header .title {
     background-size: contain;
     height: 158px;
     margin-top: -35px;
+    width: 363px;
+}
+
+section.section_dungeon .content .header .sub_title {
+    background-image: url(../img/page4/p3_subtitle.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 17px;
     width: 363px;
 }
 
@@ -1031,7 +1151,7 @@ section.section_dungeon .content {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 649px;
+        height: 412px;
         /* width: 1120px; */
     }
 
@@ -1047,7 +1167,7 @@ section.section_dungeon .content {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 649px;
+        height: 555px;
     }
 
     .section_pet .visual {
@@ -1140,8 +1260,42 @@ section.section_dungeon .content {
     .section_season .content .content_wrap>div .swiper-slide {
         height: calc(100vw / 3);
         width: calc(100vw / 3);
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .section_season ol li i {
+        background-size: 100% 10%;
+        background-position: 50% 40%;
+        background-repeat: no-repeat;
+        background-image: url(../img/icon/progress_off_m.png);
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        z-index: 5;
+    }
+
+    .visible_mobile ol li {
+        width: 5.131579vw;
+        height: 4.157895vw;
+        position: absolute;
+    }
+
+    .visible_mobile ol li .progress1 {
+        left: 9.131579vw;
+    }
+
+    .visible_mobile ol li .progress2 {
+        left: 15.263158vw;
+    }
+
+    .visible_mobile ol li .progress3 {
+        left: 21.394737vw;
+    }
+
+    [class*=progress].active {
+        background-image: url(../img/icon/progress_on_m.png) !important;
     }
 
     .section_newrealm .visual {
@@ -1157,6 +1311,11 @@ section.section_dungeon .content {
         width: 234px;
     }
 
+    .section_newrealm .content .header .sub_title {
+        height: 30px;
+        width: 234px;
+    }
+
     .section_newrealm .content .sub_content .content_wrap {
         background-image: url(../img/page3/s8_content_m.png);
         background-position: 50% 50%;
@@ -1164,6 +1323,7 @@ section.section_dungeon .content {
         background-size: contain;
         height: 400px;
         width: 350px;
+        margin-top: 15px;
     }
 
     .section_dungeon .visual {
@@ -1179,17 +1339,19 @@ section.section_dungeon .content {
         width: 234px !important;
     }
 
-    .section_dungeon .content .header .description {
-        font-size: 12px !important;
+    .section_dungeon .content .header .sub_title {
+        height: 25px !important;
+        width: 234px !important;
     }
 
     .section_dungeon .content .sub_content .content_wrap {
-        background-image: url(../img/page3/s8_content_m.png);
+        background-image: url(../img/page4/p3_container_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
         height: 400px;
         width: 350px;
+        margin-top: 15px;
     }
 
     .detail-link {
