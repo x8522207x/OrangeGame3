@@ -321,6 +321,37 @@
           </div>
         </div>
       </div>
+      <div id="dialog" class="dialog">
+        <div class="dialog-content">
+          <button class="closeBtn">×</button>
+          <div class="dialog-header">
+            <img src="./img/page2/p1_popup_title.png" alt="上一頁" />
+          </div>
+          <div class="dialog-body">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>獎勵項目</th>
+                  <th>獎勵數量</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <!-- 動態填充表格內容 -->
+              </tbody>
+            </table>
+            <div class="pagination">
+              <button class="prevBtn">
+                <img src="./img/icon/left_arrow_m.png" alt="上一頁" />
+              </button>
+              <div id="page-numbers"></div>
+              <button class="nextBtn">
+                <img src="./img/icon/right_arrow_m.png" alt="下一頁" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div
         id="plate_page"
         style="--72516594: 0px; --9617c380: 0px; --cfc4fde0: 0px"
@@ -438,7 +469,9 @@
                     <div class="sub_content">
                       <div class="content_wrap">
                         <div>
-                          <dl class="reward1"></dl>
+                          <dl class="reward1">
+                            <button class="reward_btn"></button>
+                          </dl>
                           <dl class="reward2">
                             <div class="swiper-container nested-swiper-child1">
                               <div class="swiper-wrapper">
@@ -681,8 +714,8 @@
                         <div class="items">
                           <div class="item item1">
                             <div class="title">
-                              <p class="t1">시간틈바귀 3지역</p>
-                              <p class="t2">망각의 고성</p>
+                              <p class="t1"></p>
+                              <p class="t2"></p>
                             </div>
                           </div>
                           <div class="item item2">
@@ -691,8 +724,8 @@
                               alt="용혈계승자"
                             />
                             <div class="title">
-                              <p class="t1">시간틈바귀 보스</p>
-                              <p class="t2">용혈계승자</p>
+                              <p class="t1"></p>
+                              <p class="t2"></p>
                             </div>
                           </div>
                           <div class="item item3">
@@ -714,7 +747,6 @@
                         </div>
                       </div>
                     </div>
-                    <button type="button" class="btn"></button>
                   </div>
                 </section>
               </div>

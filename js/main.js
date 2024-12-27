@@ -54,6 +54,22 @@ $(document).ready(() => {
         $('.youtube--2').remove();
     });
 
+    $('.prevBtn').on('click', () => {
+        prevPage();
+    });
+
+    $('.nextBtn').on('click', () => {
+        nextPage();
+    });
+
+    $('.closeBtn').on('click', () => {
+        closeDialog();
+    });
+
+    $('.reward_btn').on('click', () => {
+        openDialog();
+    });
+
     // $('.portrait span')[2].classList.add('active');
     // $('.list li')[2].classList.add('active');
     // $('.info_wrap')[2].classList.add('active');
@@ -309,6 +325,159 @@ $(document).ready(() => {
     }
     p2Child1Swiper();
     p6Swiper();
+
+    let currentPage = 1;
+    const pageSize = 10;
+    let data = [{
+        name: "xd3",
+        count: 101,
+    }, {
+        name: "xd2",
+        count: 102,
+    }, {
+        name: "xd4",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd5",
+        count: 10,
+    }, {
+        name: "xd6",
+        count: 10,
+    }, {
+        name: "xd7",
+        count: 102,
+    }, {
+        name: "xd",
+        count: 105,
+    }, {
+        name: "xd1",
+        count: 1012312,
+    }, {
+        name: "xd32",
+        count: 103123,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd1124",
+        count: 10123,
+    }, {
+        name: "xdqweq",
+        count: 101231,
+    }, {
+        name: "xddsada",
+        count: 101,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    }, {
+        name: "xd",
+        count: 10,
+    },]
+    const totalPages = Math.ceil(data.length / pageSize);
+
+    function renderTable() {
+        const start = (currentPage - 1) * pageSize;
+        const end = currentPage * pageSize;
+        const pageData = data.slice(start, end);
+
+        const tableBody = document.getElementById("table-body");
+        tableBody.innerHTML = pageData.map((item) =>
+            `
+                <tr>
+                    <td>${item.name}</td>
+                    <td>${item.count}</td>
+                </tr>
+            ` ).join("");
+
+        renderPagination();
+    }
+
+    function renderPagination() {
+        const pageNumbersContainer = document.getElementById("page-numbers");
+        pageNumbersContainer.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("div");
+            pageButton.textContent = i;
+            pageButton.className = "page-number";
+            if (i === currentPage) {
+                pageButton.classList.add("active");
+            }
+            pageButton.onclick = () => goToPage(i);
+            pageNumbersContainer.appendChild(pageButton);
+        }
+    }
+
+    function goToPage(page) {
+        if (page < 1 || page > totalPages) return;
+        currentPage = page;
+        renderTable();
+    }
+
+    function nextPage() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderTable();
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            renderTable();
+        }
+    }
+
+    function openDialog() {
+        document.getElementById("dialog").style.display = "block";
+    }
+
+    function closeDialog() {
+        document.getElementById("dialog").style.display = "none";
+    }
+
+    // 初始化
+    renderTable();
 });
 
 const handleSmallHeight = (swiper, event) => {

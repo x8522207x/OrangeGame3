@@ -1277,6 +1277,119 @@ button {
     z-index: 1;
 }
 
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.dialog-content {
+    position: relative;
+    padding: 20px;
+    background-color: black;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: center;
+}
+
+.dialog-header img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+.dialog-body {
+    max-height: 550px;
+    overflow-y: auto;
+    font-family: "Noto Serif TC", serif;
+    font-size: 20px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table thead tr {
+    color: #fff;
+}
+
+.data-table tbody tr {
+    color: #333;
+    background-color: white;
+}
+
+.data-table th {
+    border: 1px solid #bfa578;
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table td {
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #776853;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination img {
+    width: 24px;
+    height: 24px;
+}
+
+#page-numbers {
+    display: flex;
+    gap: 5px;
+}
+
+.page-number {
+    font-family: "Noto Serif TC", serif;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.page-number.active {
+    color: white;
+    font-weight: bold;
+}
+
 @media (min-width: 769px) {
     .event_gnb {
         width: 100%;
