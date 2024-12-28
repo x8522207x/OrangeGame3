@@ -16,20 +16,6 @@ $(document).ready(() => {
         $('.modal_wrap').css('display', '');
     }, 1000);
 
-    // const audio = document.getElementById('audioPlayer');
-    // audio.currentTime = 4;
-    // $('.audio_toggle').on('click', () => {
-    //     $('.audio_toggle').toggleClass('play');
-    //     if ($('.mask_text')[1].innerText === 'on') {
-    //         $('.mask_text')[1].innerText = 'off';
-    //         audio.pause();
-    //     } else {
-    //         $('.mask_text')[1].innerText = 'on';
-    //         audio.play();
-    //     }
-    // });
-
-
     ['.event_banner', '.event_gnb_menu'].forEach(ele => $(ele).on('click', () => {
         $('.event_banner').toggleClass('-open');
     }));
@@ -42,16 +28,14 @@ $(document).ready(() => {
         openVideo("", "../img/page8/pc.mp4");
     });
 
-    $('.section_soon .content button').on('click', () => {
+    $('.section_soon .content .item.item1').on('click', () => {
         openVideo("", "../img/page8/pc.mp4");
     });
 
     $('.modal_close').on('click', () => {
-        $('.modal').css('opacity', '0');
         $('.plate_modal').toggleClass('-active');
         $('.modal.type--youtube').toggleClass('hide');
         $('.modal_box_veil').toggleClass('-hide');
-        $('.youtube--2').remove();
     });
 
     $('.prevBtn').on('click', () => {
@@ -69,20 +53,6 @@ $(document).ready(() => {
     $('.reward_btn').on('click', () => {
         openDialog();
     });
-
-    // $('.portrait span')[2].classList.add('active');
-    // $('.list li')[2].classList.add('active');
-    // $('.info_wrap')[2].classList.add('active');
-
-    // $('.list li').on('click', function (e) {
-    //     $('.list li').removeClass('active');
-    //     $('.portrait span').removeClass('active');
-    //     $('.info_wrap').removeClass('active');
-    //     e.currentTarget.classList.add('active');
-    //     const index = $(this).index();
-    //     $('.portrait span')[index].classList.add('active');
-    //     $('.info_wrap')[index].classList.add('active');
-    // });
 
     const pcSwiper = () => {
         const swiper = new Swiper('.section-pages', {
@@ -468,14 +438,6 @@ $(document).ready(() => {
         }
     }
 
-    function openDialog() {
-        document.getElementById("dialog").style.display = "block";
-    }
-
-    function closeDialog() {
-        document.getElementById("dialog").style.display = "none";
-    }
-
     // 初始化
     renderTable();
 });
@@ -540,3 +502,13 @@ const openVideo = (video, path) => {
             `<video class="modal_youtube youtube--2" loop="" autoplay="" playsinline="" controls="" controlslist="nodownload" preload="metadata"><source src=${path}></video>`);
     }
 };
+
+function openDialog() {
+    $('.modal.type--reward').toggleClass('hide');
+    document.getElementById("dialog").style.display = "block";
+}
+
+function closeDialog() {
+    $('.modal.type--reward').toggleClass('hide');
+    document.getElementById("dialog").style.display = "none";
+}

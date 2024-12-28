@@ -323,7 +323,8 @@ html {
     z-index: 2;
 }
 
-.modal.type--youtube.hide {
+.modal.type--youtube.hide,
+.modal.type--reward.hide {
     display: none;
 }
 
@@ -1282,8 +1283,10 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 90%;
     max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1320,7 +1323,7 @@ button {
 }
 
 .dialog-body {
-    max-height: 550px;
+    max-height: 555px;
     overflow-y: auto;
     font-family: "Noto Serif TC", serif;
     font-size: 20px;
@@ -1339,6 +1342,7 @@ button {
 .data-table tbody tr {
     color: #333;
     background-color: white;
+    border-bottom: 1px solid #bfa578;
 }
 
 .data-table th {
@@ -1376,12 +1380,12 @@ button {
 
 #page-numbers {
     display: flex;
-    gap: 5px;
 }
 
 .page-number {
     font-family: "Noto Serif TC", serif;
-    padding: 5px 10px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
     cursor: pointer;
 }
 

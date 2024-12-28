@@ -340,6 +340,7 @@ section.area .content {
     flex-direction: column;
     height: 100%;
     justify-content: center;
+    margin: auto;
     overflow: hidden;
     width: 100%;
 }
@@ -796,19 +797,6 @@ section.section_dungeon .content .sub_content .content_wrap {
     /* width: 1220px; */
 }
 
-section.section_dungeon .content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    margin: auto;
-    overflow: hidden;
-    /* padding-bottom: 130px;
-    padding-top: 100px; */
-    width: 100%;
-}
-
 .section_ruin .visual .bg {
     background-image: url(../img/page5/p2_bg.png);
     background-position: 50% 50%;
@@ -821,13 +809,13 @@ section.section_dungeon .content {
 }
 
 .section_ruin .content .header .title {
-    background-image: url(../img/page4/s2_title.png);
+    background-image: url(../img/page5/p5_main-msg.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 158px;
-    margin-top: -35px;
-    width: 363px;
+    height: 240px;
+    margin-top: -65px;
+    width: 650px;
 }
 
 .section_ruin .content .header .description {
@@ -985,11 +973,11 @@ section.section_dungeon .content {
 }
 
 .section_equipment .title {
-    background-image: url(../img/page6/title_section4.png);
+    background-image: url(../img/page7/p7_main-title.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 256px;
+    height: 110px;
     position: relative;
     width: 100%;
 }
@@ -1027,18 +1015,18 @@ section.section_dungeon .content {
 
 .section_soon .content .sub_content .items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 267px 360px;
     height: 640px;
     width: 1200px;
     grid-gap: 12px;
     grid-template-areas:
-        "a a a e"
-        "b b c e";
+        "a a a a e"
+        "b b c c e";
 }
 
 .section_soon .content .sub_content .items .item.item1 {
-    background-image: url(https://wp.vod.nexoncdn.co.kr/page/release/episode3/pc/p9_a.jpg);
+    background-image: url(../img/page8/p9_a.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1087,7 +1075,7 @@ section.section_dungeon .content {
 }
 
 .section_soon .content .sub_content .items .item.item2 {
-    background-image: url(https://wp.vod.nexoncdn.co.kr/page/release/episode3/pc/p9_b.jpg);
+    background-image: url(../img/page8/p8_item03.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1095,19 +1083,12 @@ section.section_dungeon .content {
     position: relative;
 }
 
-.section_soon .content .sub_content .items .item.item2 img {
-    left: -4px;
-    position: absolute;
-    top: -21px;
-    width: 307px;
-}
-
 .section_soon .content .sub_content .items .item.item2 .title {
     background: linear-gradient(270deg, #00000085, #00000085);
 }
 
 .section_soon .content .sub_content .items .item.item3 {
-    /* background-image: url(../img/page8/p9_d.jpg); */
+    background-image: url(../img/page8/p9_d.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1117,13 +1098,14 @@ section.section_dungeon .content {
 
 .section_soon .content .sub_content .items .item.item3 img {
     position: absolute;
-    right: -12px;
-    top: 22px;
-    width: 322px;
+    right: -117px;
+    top: -21px;
+    z-index: 1;
 }
 
 .section_soon .content .sub_content .items .item.item3 .title {
     background: linear-gradient(270deg, #00000085, #00000085);
+    z-index: 2;
 }
 
 .section_soon .content .sub_content .items .item.item4 {
@@ -1403,9 +1385,10 @@ section.section_dungeon .content {
     }
 
     .section_ruin .content .header .title {
-        height: 78px !important;
-        margin-top: -17px !important;
-        width: 234px !important;
+        background-image: url(../img/page5/p5_main-msg_m.png);
+        height: 117px !important;
+        margin-top: -50px !important;
+        width: 100% !important;
     }
 
     .section_ruin .content .header .description {
@@ -1413,7 +1396,7 @@ section.section_dungeon .content {
     }
 
     .section_ruin .content .sub_content {
-        margin-top: -5vh;
+        margin-top: -10vh;
     }
 
     .section_pet .visual {
@@ -1466,7 +1449,7 @@ section.section_dungeon .content {
     }
 
     .section_equipment .title {
-        background-image: url(../img/page6/title_section4_m.png);
+        background-image: url(../img/page7/p7_main-title.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
@@ -1479,7 +1462,7 @@ section.section_dungeon .content {
     }
 
     .section_soon .visual .bg {
-        height: 176.3021vw !important;
+        height: 186.6666vw !important;
     }
 
     .section_soon .btn {
@@ -1508,10 +1491,10 @@ section.section_dungeon .content {
 
 @media (max-width: 1024px) {
     .section_soon .visual .bg {
-        background-image: url(../img/page8/p9_bg_m.jpg);
+        background-image: url(../img/page8/p9_bg_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         height: 1354px;
     }
 

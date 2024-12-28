@@ -69,6 +69,42 @@
         <div class="cursor"></div>
       </div>
       <div id="plate_modal">
+        <div class="modal type--reward">
+          <div
+            class="modal_dimmed"
+            style="background-color: rgba(0, 0, 0, 0.8)"
+          ></div>
+          <div id="dialog" class="dialog">
+            <button class="closeBtn">×</button>
+            <div class="dialog-content">
+              <div class="dialog-header">
+                <img src="./img/page2/p1_popup_title.png" alt="上一頁" />
+              </div>
+              <div class="dialog-body">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>獎勵項目</th>
+                      <th>獎勵數量</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-body">
+                    <!-- 動態填充表格內容 -->
+                  </tbody>
+                </table>
+                <div class="pagination">
+                  <button class="prevBtn">
+                    <img src="./img/icon/left_arrow_m.png" alt="上一頁" />
+                  </button>
+                  <div id="page-numbers"></div>
+                  <button class="nextBtn">
+                    <img src="./img/icon/right_arrow_m.png" alt="下一頁" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="modal type--youtube">
           <div
             class="modal_dimmed"
@@ -102,7 +138,7 @@
                 <div class="modal_box_veil">
                   <div
                     class="spinner_wave_dots"
-                    style="_42f2e9e9: rgba(100, 100, 100, 1)"
+                    style="--42f2e9e9: rgba(100, 100, 100, 1)"
                   >
                     <span></span>
                     <span></span>
@@ -321,37 +357,6 @@
           </div>
         </div>
       </div>
-      <div id="dialog" class="dialog">
-        <div class="dialog-content">
-          <button class="closeBtn">×</button>
-          <div class="dialog-header">
-            <img src="./img/page2/p1_popup_title.png" alt="上一頁" />
-          </div>
-          <div class="dialog-body">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>獎勵項目</th>
-                  <th>獎勵數量</th>
-                </tr>
-              </thead>
-              <tbody id="table-body">
-                <!-- 動態填充表格內容 -->
-              </tbody>
-            </table>
-            <div class="pagination">
-              <button class="prevBtn">
-                <img src="./img/icon/left_arrow_m.png" alt="上一頁" />
-              </button>
-              <div id="page-numbers"></div>
-              <button class="nextBtn">
-                <img src="./img/icon/right_arrow_m.png" alt="下一頁" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div
         id="plate_page"
         style="--72516594: 0px; --9617c380: 0px; --cfc4fde0: 0px"
@@ -613,14 +618,6 @@
                   <div class="content">
                     <div class="header">
                       <div class="title"></div>
-                      <div class="description">
-                        뒤틀린 시공간에서 벌어지는 혼란과 만남, 협력과 갈등이
-                        스탠더님을 서서히 인과의 수레바퀴로 인도하는 것
-                        같습니다. <br />
-                        시간틈바귀의 록소돈 능선에서 시작된 발걸음은 이제 모든
-                        것이 멈춰버린 시간틈바귀의 새로운 공간, 천년 폐허로
-                        향하게 됩니다.
-                      </div>
                     </div>
                     <div class="sub_content">
                       <div class="map"></div>
@@ -714,34 +711,24 @@
                         <div class="items">
                           <div class="item item1">
                             <div class="title">
-                              <p class="t1"></p>
-                              <p class="t2"></p>
+                              <p class="t1">時空縫隙3地區</p>
+                              <p class="t2">忘卻古城</p>
                             </div>
                           </div>
                           <div class="item item2">
-                            <img
-                              src="https://wp.vod.nexoncdn.co.kr/page/release/episode3/pc/p9_b_char.png"
-                              alt="용혈계승자"
-                            />
                             <div class="title">
-                              <p class="t1"></p>
-                              <p class="t2"></p>
+                              <p class="t2">新地區西吉爾</p>
                             </div>
                           </div>
                           <div class="item item3">
-                            <img
-                              src="./img/page8/p9_d.jpg"
-                              alt="클래스 체인지 &amp; 클래스 집중 케어"
-                            />
+                            <img src="./img/page8/p9_d_char.png" />
                             <div class="title">
-                              <p class="t2">
-                                클래스 체인지 &amp; 클래스 집중 케어
-                              </p>
+                              <p class="t2">職業集中照顧</p>
                             </div>
                           </div>
                           <div class="item item4">
                             <div class="title">
-                              <p class="t2">에테르 거신</p>
+                              <p class="t2">以太巨神</p>
                             </div>
                           </div>
                         </div>
