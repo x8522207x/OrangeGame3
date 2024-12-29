@@ -1367,6 +1367,7 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .visible_mobile ol li {
+        max-width: 30px;
         width: 7.131579vw;
         height: 4.157895vw;
         position: absolute;
@@ -1374,15 +1375,15 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .visible_mobile ol li .progress1 {
-        left: 13.131579vw;
+        left: calc((100vh - 180px) / 11);
     }
 
     .visible_mobile ol li .progress2 {
-        left: 22.263158vw;
+        left: clamp(0px, calc((100vh - 180px) / 11 + 7.131579vw + 10px), calc((100vh - 180px) / 11 + 40px));
     }
 
     .visible_mobile ol li .progress3 {
-        left: 31.394737vw;
+        left: clamp(0px, calc((100vh - 180px) / 11 + 14.263158vw + 20px), calc((100vh - 180px) / 11 + 80px));
     }
 
     [class*=progress].active {

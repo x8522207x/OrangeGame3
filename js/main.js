@@ -282,7 +282,7 @@ $(document).ready(() => {
         $('.section_main .content .video-open').on('click', () => {
             openVideo("", "../img/page8/p8_pc.mp4");
         });
-    
+
         $('.section_soon .content .item.item1').on('click', () => {
             openVideo("", "../img/page8/p8_pc.mp4");
         });
@@ -294,7 +294,7 @@ $(document).ready(() => {
         $('.section_main .content .video-open').on('click', () => {
             openVideo("", "../img/page8/p8_m.mp4");
         });
-    
+
         $('.section_soon .content .item.item1').on('click', () => {
             openVideo("", "../img/page8/p8_m.mp4");
         });
