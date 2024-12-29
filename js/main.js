@@ -187,8 +187,8 @@ $(document).ready(() => {
             passiveListeners: false,
             allowTouchMove: true,
             navigation: {
-                nextEl: '.nested-swiper-child2 .swiper-button-next',
-                prevEl: '.nested-swiper-child2 .swiper-button-prev',
+                nextEl: '.swiper-child2-button-next',
+                prevEl: '.swiper-child2-button-prev',
             },
             on: {
                 init: (swiper) => {

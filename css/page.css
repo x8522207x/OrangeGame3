@@ -641,10 +641,7 @@ section.section_main .content .scroll {
     color: #0000 !important;
     filter: grayscale(.5) brightness(.8);
     font-size: 0 !important;
-    height: calc(100vw / 15);
     position: absolute;
-    top: 50%;
-    width: calc(100vw / 30);
     z-index: 5;
     -webkit-text-size-adjust: none;
     background-image: url(../img/icon/right_arrow_m.png);
@@ -1157,6 +1154,7 @@ section.section_dungeon .content .sub_content .content_wrap {
     .section_season .content .content_wrap .reward2 .nested-swiper-child1 {
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -1286,14 +1284,10 @@ section.section_dungeon .content .sub_content .content_wrap {
         flex-direction: column;
     }
 
-    .section_season .reward2 .swiper-container .swiper-button-prev {
-        left: 0%;
-        transform: scaleX(-1);
-    }
-
+    .section_season .reward2 .swiper-container .swiper-button-prev,
     .section_season .reward3 .swiper-container .swiper-child2-button-prev {
         left: 0%;
-        transform: scaleX(-1) translateY(-265%) !important;
+        transform: scaleX(-1) translateY(20px) !important;
     }
 
     .section_season .reward2 .swiper-container .swiper-button-next,
@@ -1301,16 +1295,19 @@ section.section_dungeon .content .sub_content .content_wrap {
         right: 0%;
     }
 
+    .section_season .reward3 .swiper-container ol {
+        display: flex;
+        justify-content: center;
+    }
+
     .section_season .reward2 .swiper-container .swiper-button-next,
     .section_season .reward2 .swiper-container .swiper-button-prev {
         color: #0000 !important;
         filter: grayscale(.5) brightness(.8);
         font-size: 0 !important;
-        height: calc((100vh - 165px) / 15);
         position: absolute;
-        top: calc(50% + 25px);
-        width: calc((100vh - 165px) / 30);
         z-index: 5;
+        transform: translateY(20px);
         -webkit-text-size-adjust: none;
         background-image: url(../img/icon/right_arrow_m.png);
         background-position: 50% 50%;
@@ -1323,28 +1320,34 @@ section.section_dungeon .content .sub_content .content_wrap {
         color: #0000 !important;
         filter: grayscale(.5) brightness(.8);
         font-size: 0 !important;
-        height: calc((100vh - 165px) / 15);
         position: absolute;
-        transform: translateY(-265%);
-        width: calc((100vh - 165px) / 30);
+        transform: translateY(20px);
         z-index: 5;
         -webkit-text-size-adjust: none;
         background-image: url(../img/icon/right_arrow_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
+        width: calc(var(--swiper-navigation-size) / 44* 27);
+        height: var(--swiper-navigation-size);
+        cursor: pointer;
     }
 
     .section_season .content .content_wrap .reward1,
     .section_season .content .content_wrap .reward2,
-    .section_season .content .content_wrap .visible_mobile.reward3,
-    .section_season .content .content_wrap .reward4,
-    .section_season .content .content_wrap .reward5 {
+    .section_season .content .content_wrap .visible_mobile.reward3 {
         height: calc((100vh - 165px)/3) !important;
         width: calc((100vh - 165px)/3) !important;
         max-width: 300px !important;
         max-height: 300px !important;
         margin-bottom: -20px;
+    }
+
+    .section_season .content .content_wrap .reward2 .nested-swiper-child1,
+    .section_season .content .content_wrap .reward3.visible_mobile .nested-swiper-child2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .section_season .content .content_wrap>div .swiper-slide {
@@ -1375,15 +1378,11 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .visible_mobile ol li .progress1 {
-        left: calc((100vh - 180px) / 11);
-    }
-
-    .visible_mobile ol li .progress2 {
-        left: clamp(0px, calc((100vh - 180px) / 11 + 7.131579vw + 10px), calc((100vh - 180px) / 11 + 40px));
+        right: clamp(0px, calc(7.131579vw + 10px), 40px);
     }
 
     .visible_mobile ol li .progress3 {
-        left: clamp(0px, calc((100vh - 180px) / 11 + 14.263158vw + 20px), calc((100vh - 180px) / 11 + 80px));
+        left: clamp(0px, calc(7.131579vw + 10px), 40px);
     }
 
     [class*=progress].active {
