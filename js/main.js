@@ -1,12 +1,12 @@
 let startY = 0;
-(function (d) {
-    var config = {
-        kitId: 'gof2byk',
-        scriptTimeout: 3000,
-        async: true
-    },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-})(document);
+// (function (d) {
+//     var config = {
+//         kitId: 'gof2byk',
+//         scriptTimeout: 3000,
+//         async: true
+//     },
+//         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+// })(document);
 
 $(document).ready(() => {
     $('.modal_wrap').css('display', 'none');
@@ -22,14 +22,6 @@ $(document).ready(() => {
 
     $('.event_gnb_gamestart').on('click', () => {
         window.open("https://galaxy.beanfun.com/webapi/view/login/twp?redirect_url=https://warsofprasia.beanfun.com/Main");
-    });
-
-    $('.section_main .content button').on('click', () => {
-        openVideo("", "../img/page8/pc.mp4");
-    });
-
-    $('.section_soon .content .item.item1').on('click', () => {
-        openVideo("", "../img/page8/pc.mp4");
     });
 
     $('.modal_close').on('click', () => {
@@ -287,11 +279,25 @@ $(document).ready(() => {
 
     if ($(window).width() > 768) {
         pcSwiper();
+        $('.section_main .content .video-open').on('click', () => {
+            openVideo("", "../img/page8/p8_pc.mp4");
+        });
+    
+        $('.section_soon .content .item.item1').on('click', () => {
+            openVideo("", "../img/page8/p8_pc.mp4");
+        });
     } else {
         $('.event_gnb').toggleClass('type_default');
         $('.event_gnb').toggleClass('type_clear');
         mobileSwiper();
         p2Child2Swiper();
+        $('.section_main .content .video-open').on('click', () => {
+            openVideo("", "../img/page8/p8_m.mp4");
+        });
+    
+        $('.section_soon .content .item.item1').on('click', () => {
+            openVideo("", "../img/page8/p8_m.mp4");
+        });
     }
     p2Child1Swiper();
     p6Swiper();
@@ -299,90 +305,78 @@ $(document).ready(() => {
     let currentPage = 1;
     const pageSize = 10;
     let data = [{
-        name: "xd3",
-        count: 101,
+        name: "英雄造型_坐騎招喚禮物選擇箱",
+        count: 188,
     }, {
-        name: "xd2",
-        count: 102,
+        name: "閃亮的解除侵襲卷軸選擇箱",
+        count: 99,
     }, {
-        name: "xd4",
-        count: 10,
+        name: "Lv55英雄防具_飾品選擇箱",
+        count: 172,
     }, {
-        name: "xd",
-        count: 10,
+        name: "Lv55英雄特別的強化卷軸選擇箱",
+        count: 203,
     }, {
-        name: "xd",
-        count: 10,
+        name: "稀有特別的武器強化卷軸",
+        count: 366,
     }, {
-        name: "xd",
-        count: 10,
+        name: "稀有特別的飾品強化卷軸",
+        count: 366,
     }, {
-        name: "xd",
-        count: 10,
+        name: "閃亮的解除侵蝕卷軸選擇箱",
+        count: 156,
     }, {
-        name: "xd",
-        count: 10,
+        name: "造型召喚最高級禮物(11次)",
+        count: 1107,
     }, {
-        name: "xd",
-        count: 10,
+        name: "Lv55英雄武器選擇箱",
+        count: 210,
     }, {
-        name: "xd5",
-        count: 10,
+        name: "英雄造型_坐騎召喚禮物選擇箱",
+        count: 300,
     }, {
-        name: "xd6",
-        count: 10,
+        name: "英雄造型_坐騎招喚禮物選擇箱",
+        count: 188,
     }, {
-        name: "xd7",
-        count: 102,
+        name: "閃亮的解除侵襲卷軸選擇箱",
+        count: 99,
     }, {
-        name: "xd",
-        count: 105,
+        name: "Lv55英雄防具_飾品選擇箱",
+        count: 172,
     }, {
-        name: "xd1",
-        count: 1012312,
+        name: "Lv55英雄特別的強化卷軸選擇箱",
+        count: 203,
     }, {
-        name: "xd32",
-        count: 103123,
+        name: "稀有特別的武器強化卷軸",
+        count: 366,
     }, {
-        name: "xd",
-        count: 10,
+        name: "稀有特別的飾品強化卷軸",
+        count: 366,
     }, {
-        name: "xd1124",
-        count: 10123,
+        name: "閃亮的解除侵蝕卷軸選擇箱",
+        count: 156,
     }, {
-        name: "xdqweq",
-        count: 101231,
+        name: "造型召喚最高級禮物(11次)",
+        count: 1107,
     }, {
-        name: "xddsada",
-        count: 101,
+        name: "Lv55英雄武器選擇箱",
+        count: 210,
     }, {
-        name: "xd",
-        count: 10,
+        name: "英雄造型_坐騎召喚禮物選擇箱",
+        count: 300,
     }, {
-        name: "xd",
-        count: 10,
+        name: "Lv55英雄武器選擇箱",
+        count: 210,
     }, {
-        name: "xd",
-        count: 10,
+        name: "英雄造型_坐騎召喚禮物選擇箱",
+        count: 300,
     }, {
-        name: "xd",
-        count: 10,
+        name: "Lv55英雄武器選擇箱",
+        count: 210,
     }, {
-        name: "xd",
-        count: 10,
-    }, {
-        name: "xd",
-        count: 10,
-    }, {
-        name: "xd",
-        count: 10,
-    }, {
-        name: "xd",
-        count: 10,
-    }, {
-        name: "xd",
-        count: 10,
-    },]
+        name: "英雄造型_坐騎召喚禮物選擇箱",
+        count: 300,
+    }]
     const totalPages = Math.ceil(data.length / pageSize);
 
     function renderTable() {

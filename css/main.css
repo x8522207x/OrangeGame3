@@ -307,6 +307,19 @@ html {
     width: auto;
 }
 
+#plate_modal .dialog_inner {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+    min-height: 0;
+    position: relative;
+    width: auto;
+}
+
 .modal {
     align-items: center;
     background-color: initial;
@@ -337,6 +350,13 @@ html {
 .modal.type--youtube .modal_inner .modal_box {
     border-radius: 3px;
     width: 100%;
+}
+
+.modal.type--reward .dialog_inner .dialog-content {
+    border-radius: 3px;
+    width: 100%;
+    padding: 0px 24px;
+    background-color: black;
 }
 
 .modal .modal_dimmed,
@@ -411,6 +431,19 @@ html {
     width: auto;
 }
 
+.dialog_inner .dialog-content {
+    border-radius: 3px;
+    box-sizing: border-box;
+    filter: drop-shadow(0 7px 14px rgba(0, 0, 0, .25));
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 0;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+
 .modal_inner .modal_box .modal_box_theme {
     box-sizing: border-box;
     height: 100%;
@@ -441,6 +474,144 @@ html {
     opacity: 0;
     pointer-events: none;
 }
+
+
+.dialog {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: auto;
+    max-height: 100%;
+    min-height: 0;
+    overflow: auto;
+    pointer-events: auto;
+    position: relative;
+    vertical-align: top;
+    will-change: transform, opacity;
+    z-index: 2;
+}
+
+.closeBtn {
+    align-items: center;
+    align-self: center;
+    background-color: #bfa578;
+    border: 1px solid #bfa578;
+    display: inline-flex;
+    display: flex;
+    flex: 0 0 auto;
+    height: 36px;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transition: border .16s ease, background-color .16s ease;
+    width: 36px;
+}
+
+.closeBtn:hover {
+    background-color: #000;
+    border: 1px solid #fff;
+}
+
+.closeBtn::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAzNSAzNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMi45MTY4MUwyLjkxNjYxIDAuMDAwMTU4MTcxTDM0Ljk5OTMgMzIuMDgzM0wzMi4wODI3IDM1TDAgMi45MTY4MVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yLjkxNzI3IDM0Ljk5OThMMC4wMDA2NTc2NjYgMzIuMDgzMkwzMi4wODM0IDBMMzUgMi45MTY2NUwyLjkxNzI3IDM0Ljk5OThaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    content: "";
+    display: inline-flex;
+    height: 44%;
+    vertical-align: top;
+    width: 44%;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: center;
+}
+
+.dialog-header img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.dialog-body {
+    max-height: 630px;
+    overflow-y: auto;
+    font-family: "Noto Serif TC", serif;
+    font-size: 20px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table thead tr {
+    color: #fff;
+}
+
+.data-table tbody tr {
+    color: #333;
+    background-color: white;
+    border-bottom: 1px solid #bfa578;
+}
+
+.data-table th {
+    border: 1px solid #bfa578;
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table td {
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #776853;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination img {
+    width: 24px;
+    height: 24px;
+}
+
+#page-numbers {
+    display: flex;
+}
+
+.page-number {
+    font-family: "Noto Serif TC", serif;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.page-number.active {
+    color: white;
+    font-weight: bold;
+}
+
 
 .spinner_wave_dots {
     display: flex;
@@ -1278,122 +1449,6 @@ button {
     z-index: 1;
 }
 
-.dialog {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 600px;
-    max-height: 90vh;
-    overflow-y: auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none;
-    z-index: 1000;
-}
-
-.dialog-content {
-    position: relative;
-    padding: 20px;
-    background-color: black;
-}
-
-.closeBtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.dialog-header {
-    display: flex;
-    justify-content: center;
-}
-
-.dialog-header img {
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 20px;
-    margin-bottom: 20px;
-}
-
-.dialog-body {
-    max-height: 555px;
-    overflow-y: auto;
-    font-family: "Noto Serif TC", serif;
-    font-size: 20px;
-}
-
-.data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.data-table thead tr {
-    color: #fff;
-}
-
-.data-table tbody tr {
-    color: #333;
-    background-color: white;
-    border-bottom: 1px solid #bfa578;
-}
-
-.data-table th {
-    border: 1px solid #bfa578;
-    padding: 8px;
-    text-align: center;
-}
-
-.data-table td {
-    padding: 8px;
-    text-align: center;
-}
-
-.data-table th {
-    background-color: #776853;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.pagination button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.pagination img {
-    width: 24px;
-    height: 24px;
-}
-
-#page-numbers {
-    display: flex;
-}
-
-.page-number {
-    font-family: "Noto Serif TC", serif;
-    padding: 0px 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.page-number.active {
-    color: white;
-    font-weight: bold;
-}
-
 @media (min-width: 769px) {
     .event_gnb {
         width: 100%;
@@ -1416,6 +1471,10 @@ button {
     .modal_inner .modal_close {
         right: 24px;
         top: 14px;
+    }
+
+    #plate_modal .dialog_inner {
+        padding-top: 36px;
     }
 }
 
@@ -1461,10 +1520,6 @@ button {
         height: 30px;
         width: 30px;
     }
-
-    /* .event_gnb_gamestart {
-        display: none;
-    } */
 }
 
 @media (max-width: 768px) {
@@ -1610,6 +1665,13 @@ button {
 
     #plate_nav:after {
         display: none;
+    }
+
+    .dialog-body {
+        max-height: 555px;
+        overflow-y: auto;
+        font-family: "Noto Serif TC", serif;
+        font-size: 16px;
     }
 }
 

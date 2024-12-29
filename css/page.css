@@ -456,7 +456,7 @@ section.area .content .content_wrap .header .subtitle2 {
 }
 
 /* .section_main .content .header .subtitle {
-    background-image: url(../img/page1/p0_eouside3.png);
+    background-image: url(../img/page1/p1_eouside3.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -469,7 +469,7 @@ section.area .content .content_wrap .header .subtitle2 {
 
 section.section_main .content .subtitle {
     animation: bright-hue 8s cubic-bezier(.37, 0, .63, 1) infinite, title-bound 2.241s cubic-bezier(.65, 0, .35, 1) infinite alternate;
-    background-image: url(../img/page1/p0_eouside3.png);
+    background-image: url(../img/page1/p1_eouside3.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -480,19 +480,19 @@ section.section_main .content .subtitle {
 
 section.section_main .content .title {
     animation: bright-hue 3s cubic-bezier(.37, 0, .63, 1) infinite, title-bound 3.1s cubic-bezier(.65, 0, .35, 1) infinite alternate;
-    background-image: url(../img/page1/p0_title.png);
+    background-image: url(../img/page1/p1_title.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
     height: 318px;
     margin-bottom: -87px;
     margin-top: -82px;
-    width: 680px;
+    width: 415px;
 }
 
 section.section_main .content .date {
     animation: bright-hue 4s cubic-bezier(.37, 0, .63, 1) infinite, title-bound 1.4s cubic-bezier(.65, 0, .35, 1) infinite alternate;
-    background-image: url(../img/page1/s1_period.png);
+    background-image: url(../img/page1/date.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -501,42 +501,46 @@ section.section_main .content .date {
 }
 
 section.section_main .content .video-open {
-    background-image: url(../img/page1/p0_video_play.png);
+    background-image: url(../img/page1/p1_video_play.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
     height: 143px;
     margin-top: 140px;
     transition: background .2s ease;
-    width: 146px;
+    width: 115px;
+}
+
+section.section_main .content .video-open:hover {
+    background-image: url(../img/page1/p1_video_play_active.png);
 }
 
 section.section_main .content .scroll {
     animation: scroll-bound .6s cubic-bezier(.65, 0, .35, 1) infinite alternate;
-    background-image: url(../img/page1/p0_scroll.png);
+    background-image: url(../img/page1/p1_scroll.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
     height: 65px;
     margin-top: 30px;
-    width: 101px;
+    width: 80px;
 }
 
 .section_season .visual .bg {
-    background-image: url(../img/page2/p1_bg.jpg);
+    background-image: url(../img/page2/p2_bg.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .section_season .content .header .title {
-    background-image: url(../img/page2/p1_title.png);
+    background-image: url(../img/page2/p2_title.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
     height: 156px;
     margin-top: 37px;
-    width: 468px;
+    width: 350px;
 }
 
 .section_season .content .content_wrap>div {
@@ -561,7 +565,7 @@ section.section_main .content .scroll {
 }
 
 .section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_1 {
-    background-image: url(../img/page2/p1_block01.png);
+    background-image: url(../img/page2/p2_reward1.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -575,28 +579,28 @@ section.section_main .content .scroll {
 }
 
 .section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_3 {
-    background-image: url(../img/page2/p1_block03.png);
+    background-image: url(../img/page2/p2_reward3.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_1 {
-    background-image: url(../img/page2/p1_block03.png);
+    background-image: url(../img/page2/p2_reward3.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_2 {
-    background-image: url(../img/page2/p1_block04.png);
+    background-image: url(../img/page2/p2_reward4.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_3 {
-    background-image: url(../img/page2/p1_block05.png);
+    background-image: url(../img/page2/p2_reward5.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -612,10 +616,22 @@ section.section_main .content .scroll {
     width: 100%;
 }
 
+.section_season .reward2 .swiper-container .swiper-button-next:hover,
+.section_season .reward2 .swiper-container .swiper-button-prev:hover,
+.section_season .reward3 .swiper-container .swiper-button-next:hover,
+.section_season .reward3 .swiper-container .swiper-button-prev:hover {
+    filter: none;
+}
+
 .section_season .reward2 .swiper-container .swiper-button-prev,
 .section_season .reward3 .swiper-container .swiper-button-prev {
-    left: 10%;
+    left: 10px;
     transform: scaleX(-1);
+}
+
+.section_season .reward2 .swiper-container .swiper-button-next,
+.section_season .reward3 .swiper-container .swiper-button-next {
+    right: 10px;
 }
 
 .section_season .reward2 .swiper-container .swiper-button-next,
@@ -625,32 +641,20 @@ section.section_main .content .scroll {
     color: #0000 !important;
     filter: grayscale(.5) brightness(.8);
     font-size: 0 !important;
-    height: 100px;
+    height: calc(100vw / 15);
     position: absolute;
-    top: calc(50% - 100px);
-    width: 70px;
+    top: 50%;
+    width: calc(100vw / 30);
     z-index: 5;
     -webkit-text-size-adjust: none;
     background-image: url(../img/icon/right_arrow_m.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: auto;
-}
-
-.section_season .reward2 .swiper-container .swiper-button-next:hover,
-.section_season .reward2 .swiper-container .swiper-button-prev:hover,
-.section_season .reward3 .swiper-container .swiper-button-next:hover,
-.section_season .reward3 .swiper-container .swiper-button-prev:hover {
-    filter: none;
-}
-
-.section_season .reward2 .swiper-container .swiper-button-next,
-.section_season .reward3 .swiper-container .swiper-button-next {
-    right: 10%;
+    background-size: contain;
 }
 
 .section_season .content .content_wrap .reward1 {
-    background-image: url(../img/page2/p1_block01.png);
+    background-image: url(../img/page2/p2_reward1.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -661,7 +665,7 @@ section.section_main .content .scroll {
 }
 
 .section_season .reward1 button.reward_btn {
-    background-image: url(../img/page2/btn_reward.png);
+    background-image: url(../img/page2/p2_btn_reward.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -675,44 +679,32 @@ section.section_main .content .scroll {
 }
 
 .section_season .reward1 button.reward_btn:hover {
-    background-image: url(../img/page2/btn_reward_active.png);
-}
-
-.section_season .content .content_wrap .reward1,
-.section_season .content .content_wrap .reward2,
-.section_season .content .content_wrap .visible_mobile.reward3,
-.section_season .content .content_wrap .visible_roomy .reward3,
-.section_season .content .content_wrap .reward4,
-.section_season .content .content_wrap .reward5 {
-    height: calc(100vw / 3);
-    width: calc(100vw / 3);
-    max-width: 350px;
-    max-height: 350px;
+    background-image: url(../img/page2/p2_btn_reward_active.png);
 }
 
 .section_season .content .content_wrap .visible_roomy .reward3 {
-    background-image: url(../img/page2/p1_block03.png);
+    background-image: url(../img/page2/p2_reward3.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .section_season .content .content_wrap .reward4 {
-    background-image: url(../img/page2/p1_block04.png);
+    background-image: url(../img/page2/p2_reward4.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .section_season .content .content_wrap .reward5 {
-    background-image: url(../img/page2/p1_block05.png);
+    background-image: url(../img/page2/p2_reward5.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .section_newrealm .content .header .title {
-    background-image: url(../img/page3/s8_title.png);
+    background-image: url(../img/page3/p3_title.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -722,12 +714,12 @@ section.section_main .content .scroll {
 }
 
 .section_newrealm .content .header .sub_title {
-    background-image: url(../img/page3/p2_subtitle.png);
+    background-image: url(../img/page3/p3_subtitle.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
     height: 48px;
-    width: 481px;
+    width: 350px;
 }
 
 .section_newrealm .content>*,
@@ -746,6 +738,7 @@ section.section_main .content .scroll {
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-top: 10px;
 }
 
 body .detail-link:hover {
@@ -771,7 +764,7 @@ body .detail-link:hover {
 }
 
 section.section_dungeon .content .header .title {
-    background-image: url(../img/page4/s2_title.png);
+    background-image: url(../img/page4/p4_title.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -781,7 +774,7 @@ section.section_dungeon .content .header .title {
 }
 
 section.section_dungeon .content .header .sub_title {
-    background-image: url(../img/page4/p3_subtitle.png);
+    background-image: url(../img/page4/p4_subtitle.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -798,7 +791,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_ruin .visual .bg {
-    background-image: url(../img/page5/p2_bg.png);
+    background-image: url(../img/page5/p5_bg.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -814,7 +807,7 @@ section.section_dungeon .content .sub_content .content_wrap {
     background-repeat: no-repeat;
     background-size: contain;
     height: 240px;
-    margin-top: -65px;
+    /* margin-top: -65px; */
     width: 650px;
 }
 
@@ -825,11 +818,11 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_ruin .content .sub_content {
-    margin-top: -60px;
+    margin-top: -125px;
 }
 
 .section_ruin .content .sub_content .map {
-    background-image: url(../img/page5/p2_map.png);
+    background-image: url(../img/page5/p5_map.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -847,21 +840,21 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_ruin .content .sub_content .items .item.item1 {
-    background-image: url(../img/page5/p2_item1.png);
+    background-image: url(../img/page5/p5_item1.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_ruin .content .sub_content .items .item.item2 {
-    background-image: url(../img/page5/p2_item2.png);
+    background-image: url(../img/page5/p5_item2.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_ruin .content .sub_content .items .item.item3 {
-    background-image: url(../img/page5/p2_item3.png);
+    background-image: url(../img/page5/p5_item3.png);
     background-position: 50% 50%;
     background-position-y: bottom;
     background-repeat: no-repeat;
@@ -873,7 +866,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_pet .title {
-    background-image: url(../img/page6/title_section4.png);
+    background-image: url(../img/page6/p6_title.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -912,14 +905,14 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_pet .slider .swiper-container .swiper-wrapper .swiper-slide span.n--1 {
-    background-image: url(../img/page6/img_pet1.png);
+    background-image: url(../img/page6/p6_img_pet1.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_pet .slider .swiper-container .swiper-wrapper .swiper-slide span.n--2 {
-    background-image: url(../img/page6/img_pet2.png);
+    background-image: url(../img/page6/p6_img_pet2.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -950,7 +943,7 @@ section.section_dungeon .content .sub_content .content_wrap {
     width: 70px;
     z-index: 5;
     -webkit-text-size-adjust: none;
-    background-image: url(../img/page6/btn_slide_next.png);
+    background-image: url(../img/page6/p6_btn_slide_next.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: auto;
@@ -966,14 +959,14 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_equipment .visual .bg {
-    background-image: url(../img/page7/p6_bg.jpg);
+    background-image: url(../img/page7/p7_bg.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .section_equipment .title {
-    background-image: url(../img/page7/p7_main-title.png);
+    background-image: url(../img/page7/p7_title.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -983,16 +976,16 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_equipment .content .sub_content {
-    align-items: center;
+    /* align-items: center; */
     color: #0000 !important;
-    display: flex;
+    /* display: flex; */
     font-size: 0 !important;
-    justify-content: center;
+    /* justify-content: center; */
     -webkit-text-size-adjust: none;
 }
 
 .section_equipment .content .sub_content .item.item1 {
-    background-image: url(../img/page7/p6_item1.png);
+    background-image: url(../img/page7/p7_item1.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1003,7 +996,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_soon .visual .bg {
-    background-image: url(../img/page8/p9_bg.jpg);
+    background-image: url(../img/page8/p8_bg.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1021,12 +1014,12 @@ section.section_dungeon .content .sub_content .content_wrap {
     width: 1200px;
     grid-gap: 12px;
     grid-template-areas:
-        "a a a a e"
-        "b b c c e";
+        "a a a a d"
+        "b b c c d";
 }
 
 .section_soon .content .sub_content .items .item.item1 {
-    background-image: url(../img/page8/p9_a.jpg);
+    background-image: url(../img/page8/p8_item1.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1052,12 +1045,14 @@ section.section_dungeon .content .sub_content .content_wrap {
     color: #cae5ff;
     font-size: 18px;
     padding: 0 16px;
+    font-family: "Noto Serif TC", serif;
 }
 
 .section_soon .content .sub_content .items .item .title .t2 {
     color: #fff;
     font-size: 24px;
     padding: 0 16px;
+    font-family: "Noto Serif TC", serif;
 }
 
 .section_soon .content .sub_content .items .item.item1:after {
@@ -1075,7 +1070,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_soon .content .sub_content .items .item.item2 {
-    background-image: url(../img/page8/p8_item03.png);
+    background-image: url(../img/page8/p8_item2.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1088,7 +1083,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_soon .content .sub_content .items .item.item3 {
-    background-image: url(../img/page8/p9_d.jpg);
+    background-image: url(../img/page8/p8_item3.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1109,16 +1104,20 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_soon .content .sub_content .items .item.item4 {
-    background-image: url(../img/page8/p9_e.jpg);
+    background-image: url(../img/page8/p8_item4.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    grid-area: e;
+    grid-area: d;
     position: relative;
 }
 
 .section_soon .content .sub_content .items .item.item4 .title {
     background: linear-gradient(270deg, #00000085, #00000085);
+}
+
+.section_soon .content .sub_content .items .item.item5 {
+    display: none;
 }
 
 @media (min-width: 769px) {
@@ -1131,10 +1130,6 @@ section.section_dungeon .content .sub_content .content_wrap {
         min-height: 100vh;
     }
 
-    /* section.area .content .content_wrap {
-        max-width: 1280px;
-    } */
-
     section.area .content {
         min-height: 911px !important;
     }
@@ -1143,31 +1138,56 @@ section.section_dungeon .content .sub_content .content_wrap {
         height: 672px;
     }
 
+    .section_season .content .content_wrap .reward1,
+    .section_season .content .content_wrap .reward2,
+    .section_season .content .content_wrap .visible_mobile.reward3,
+    .section_season .content .content_wrap .visible_roomy .reward3,
+    .section_season .content .content_wrap .reward4,
+    .section_season .content .content_wrap .reward5 {
+        height: calc(100vw / 3);
+        width: calc(100vw / 3);
+        max-width: 350px;
+        max-height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .section_season .content .content_wrap .reward2 .nested-swiper-child1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
     .section_newrealm .visual {
-        background-image: url(../img/page3/s8_bg.jpg);
+        background-image: url(../img/page3/p3_bg.jpg);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .section_newrealm .content .sub_content .content_wrap {
-        background-image: url(../img/page3/s8_content.png);
+        background-image: url(../img/page3/p3_content.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
         height: 412px;
-        /* width: 1120px; */
+        max-width: 1120px;
     }
 
     section.section_dungeon .visual {
-        background-image: url(../img/page4/s2_bg.jpg);
+        background-image: url(../img/page4/p4_bg.jpg);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .section_dungeon .content .sub_content .content_wrap {
-        background-image: url(../img/page4/s2_content_1.png);
+        background-image: url(../img/page4/p4_content.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
@@ -1175,7 +1195,7 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_pet .visual {
-        background-image: url(../img/page6/bg_section4.jpg);
+        background-image: url(../img/page6/p6_bg.jpg);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1252,20 +1272,86 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_season .content .header .title {
-        height: 78px;
-        margin-top: -17px;
-        width: 234px;
+        margin-top: 5px;
+        height: calc(100vw / 3);
+        max-height: 125px;
+        max-width: 500px;
+    }
+
+    .section_season .content .content_wrap .visible_roomy .reward3 {
+        background-image: url(../img/page2/p2_reward3_m.png);
     }
 
     .section_season .content .content_wrap>div {
         flex-direction: column;
     }
 
+    .section_season .reward2 .swiper-container .swiper-button-prev {
+        left: 0%;
+        transform: scaleX(-1);
+    }
+
+    .section_season .reward3 .swiper-container .swiper-child2-button-prev {
+        left: 0%;
+        transform: scaleX(-1) translateY(-265%) !important;
+    }
+
+    .section_season .reward2 .swiper-container .swiper-button-next,
+    .section_season .reward3 .swiper-container .swiper-child2-button-next {
+        right: 0%;
+    }
+
+    .section_season .reward2 .swiper-container .swiper-button-next,
+    .section_season .reward2 .swiper-container .swiper-button-prev {
+        color: #0000 !important;
+        filter: grayscale(.5) brightness(.8);
+        font-size: 0 !important;
+        height: calc((100vh - 165px) / 15);
+        position: absolute;
+        top: calc(50% + 25px);
+        width: calc((100vh - 165px) / 30);
+        z-index: 5;
+        -webkit-text-size-adjust: none;
+        background-image: url(../img/icon/right_arrow_m.png);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .section_season .reward3 .swiper-container .swiper-child2-button-next,
+    .section_season .reward3 .swiper-container .swiper-child2-button-prev {
+        color: #0000 !important;
+        filter: grayscale(.5) brightness(.8);
+        font-size: 0 !important;
+        height: calc((100vh - 165px) / 15);
+        position: absolute;
+        transform: translateY(-265%);
+        width: calc((100vh - 165px) / 30);
+        z-index: 5;
+        -webkit-text-size-adjust: none;
+        background-image: url(../img/icon/right_arrow_m.png);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .section_season .content .content_wrap .reward1,
+    .section_season .content .content_wrap .reward2,
+    .section_season .content .content_wrap .visible_mobile.reward3,
+    .section_season .content .content_wrap .reward4,
+    .section_season .content .content_wrap .reward5 {
+        height: calc((100vh - 165px)/3) !important;
+        width: calc((100vh - 165px)/3) !important;
+        max-width: 300px !important;
+        max-height: 300px !important;
+        margin-bottom: -20px;
+    }
+
     .section_season .content .content_wrap>div .swiper-slide {
-        height: calc(100vw / 3);
-        width: calc(100vw / 3);
-        max-width: 350px;
-        max-height: 350px;
+        height: calc((100vh - 165px)/3) !important;
+        width: calc((100vh - 165px)/3) !important;
+        max-width: 300px !important;
+        max-height: 300px !important;
     }
 
     .section_season ol li i {
@@ -1281,21 +1367,22 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .visible_mobile ol li {
-        width: 5.131579vw;
+        width: 7.131579vw;
         height: 4.157895vw;
         position: absolute;
+        margin-top: -15px;
     }
 
     .visible_mobile ol li .progress1 {
-        left: 9.131579vw;
+        left: 13.131579vw;
     }
 
     .visible_mobile ol li .progress2 {
-        left: 15.263158vw;
+        left: 22.263158vw;
     }
 
     .visible_mobile ol li .progress3 {
-        left: 21.394737vw;
+        left: 31.394737vw;
     }
 
     [class*=progress].active {
@@ -1303,58 +1390,58 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_newrealm .visual {
-        background-image: url(../img/page3/s8_bg_m.jpg);
+        background-image: url(../img/page3/p3_bg_m.jpg);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .section_newrealm .content .header .title {
-        height: 78px;
-        margin-top: -17px;
-        width: 234px;
+        margin-top: 25px;
+        height: calc(100vw / 3);
+        max-height: 125px;
+        max-width: 500px;
     }
 
     .section_newrealm .content .header .sub_title {
-        height: 30px;
-        width: 234px;
+        height: 5vh;
     }
 
     .section_newrealm .content .sub_content .content_wrap {
-        background-image: url(../img/page3/s8_content_m.png);
+        background-image: url(../img/page3/p3_content_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 400px;
-        width: 350px;
+        height: 95vw;
+        /* width: 350px; */
         margin-top: 15px;
     }
 
     .section_dungeon .visual {
-        background-image: url(../img/page4/s2_bg_m.jpg);
+        background-image: url(../img/page4/p4_bg_m.jpg);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .section_dungeon .content .header .title {
-        height: 78px !important;
-        margin-top: -17px !important;
-        width: 234px !important;
+        margin-top: 30px !important;
+        width: 500px !important;
+        height: calc(100vw / 3) !important;
+        max-height: 125px;
     }
 
     .section_dungeon .content .header .sub_title {
-        height: 25px !important;
-        width: 234px !important;
+        height: 5vh !important;
     }
 
     .section_dungeon .content .sub_content .content_wrap {
-        background-image: url(../img/page4/p3_container_m.png);
+        background-image: url(../img/page4/p4_content_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 400px;
-        width: 350px;
+        height: 95vw !important;
+        width: auto;
         margin-top: 15px;
     }
 
@@ -1386,9 +1473,9 @@ section.section_dungeon .content .sub_content .content_wrap {
 
     .section_ruin .content .header .title {
         background-image: url(../img/page5/p5_main-msg_m.png);
-        height: 117px !important;
+        height: calc(100vw / 3) !important;
         margin-top: -50px !important;
-        width: 100% !important;
+        width: 500px !important;
     }
 
     .section_ruin .content .header .description {
@@ -1400,36 +1487,37 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_pet .visual {
-        background-image: url(../img/page6/bg_section4.jpg);
+        background-image: url(../img/page6/p6_bg.jpg);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .section_pet .title {
-        background-image: url(../img/page6/title_section4_m.png);
+        background-image: url(../img/page6/p6_title_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 117.5px;
+        height: calc(100vw / 3);
+        max-width: 500px;
     }
 
     .section_pet .slider .swiper-container .swiper-wrapper .swiper-slide span.n--1 {
-        background-image: url(../img/page6/img_pet1_m.png);
+        background-image: url(../img/page6/p6_img_pet1_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
     }
 
     .section_pet .slider .swiper-container .swiper-wrapper .swiper-slide span.n--2 {
-        background-image: url(../img/page6/img_pet2_m.png);
+        background-image: url(../img/page6/p6_img_pet2_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
     }
 
     .section_pet .slider .swiper-container .swiper-wrapper .swiper-slide {
-        height: 237px;
+        height: calc(100vh / 3);
     }
 
     .section_pet .slider .swiper-container .swiper-button-prev {
@@ -1449,7 +1537,7 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_equipment .title {
-        background-image: url(../img/page7/p7_main-title.png);
+        background-image: url(../img/page7/p7_title.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
@@ -1457,12 +1545,12 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_equipment .content .sub_content .item {
-        height: 400px !important;
-        width: 418px !important;
+        height: 84vw !important;
+        width: 93vw !important;
     }
 
-    .section_soon .visual .bg {
-        height: 186.6666vw !important;
+    .section_soon .content .sub_content {
+        height: 500px;
     }
 
     .section_soon .btn {
@@ -1477,7 +1565,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 @media (min-width: 769px) and (max-width: 1280px) {
     .section_equipment .content .sub_content .item {
         height: 560px !important;
-        width: 498px !important;
+        width: auto !important;
     }
 
     .section_pet .slider .swiper-container .swiper-button-prev {
@@ -1490,32 +1578,71 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 @media (max-width: 1024px) {
-    .section_soon .visual .bg {
-        background-image: url(../img/page8/p9_bg_m.png);
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 1354px;
+    section.area .content .content_wrap .header .title {
+        font-size: 48px !important;
     }
 
     .section_soon .content {
-        height: 1354px !important;
+        height: 100vh !important;
     }
 
-    .section_soon .content .header {
-        display: none !important;
+    .section_soon .content .sub_content .items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 500px;
+        width: 370px;
+        grid-gap: 12px;
+        grid-template-areas:
+            "a a"
+            "b c"
+            "d d";
     }
 
-    .section_soon .content .sub_content {
-        display: none !important;
+    .section_soon .content .sub_content .items .item .title {
+        height: 65px;
     }
 
-    .section_soon .btn {
-        height: 244px;
-        transform: translate(-37%, 0%);
-        position: absolute;
-        top: 215px;
-        width: 378px;
+    .section_soon .content .sub_content .items .item .title .t1 {
+        font-size: 16px;
+    }
+
+    .section_soon .content .sub_content .items .item .title .t2 {
+        font-size: 20px;
+    }
+
+    .section_soon .content .sub_content .items .item.item2 {
+        display: none;
+    }
+
+    .section_soon .content .sub_content .items .item.item3 {
+        grid-area: b;
+    }
+
+    .section_soon .content .sub_content .items .item.item3 img {
+        right: -54px;
+        top: -2px;
+        height: auto;
+        width: 220px;
+    }
+
+    .section_soon .content .sub_content .items .item.item4 {
+        grid-area: c;
+        background-position: 50% 0%;
+    }
+
+    .section_soon .content .sub_content .items .item.item5 {
+        display: block;
+        background-image: url(../img/page8/p8_item2.png);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: d;
+        position: relative;
+    }
+
+    .section_soon .content .sub_content .items .item.item5 .title {
+        background: linear-gradient(270deg, #00000085, #00000085);
     }
 }
 
@@ -1575,7 +1702,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 
     .section_equipment .content .sub_content .item {
         height: 642px;
-        width: 580px;
+        width: auto;
     }
 }
 

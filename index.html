@@ -74,32 +74,41 @@
             class="modal_dimmed"
             style="background-color: rgba(0, 0, 0, 0.8)"
           ></div>
-          <div id="dialog" class="dialog">
-            <button class="closeBtn">×</button>
-            <div class="dialog-content">
-              <div class="dialog-header">
-                <img src="./img/page2/p1_popup_title.png" alt="上一頁" />
-              </div>
-              <div class="dialog-body">
-                <table class="data-table">
-                  <thead>
-                    <tr>
-                      <th>獎勵項目</th>
-                      <th>獎勵數量</th>
-                    </tr>
-                  </thead>
-                  <tbody id="table-body">
-                    <!-- 動態填充表格內容 -->
-                  </tbody>
-                </table>
-                <div class="pagination">
-                  <button class="prevBtn">
-                    <img src="./img/icon/left_arrow_m.png" alt="上一頁" />
-                  </button>
-                  <div id="page-numbers"></div>
-                  <button class="nextBtn">
-                    <img src="./img/icon/right_arrow_m.png" alt="下一頁" />
-                  </button>
+          <div
+            id="dialog"
+            style="
+              translate: none;
+              rotate: none;
+              scale: none;
+              transform: translate(0px, 0px);
+            "
+            class="dialog"
+          >
+            <div class="dialog_inner">
+              <button class="closeBtn"></button>
+              <div class="dialog-content">
+                <div class="dialog-header">
+                  <img src="./img/page2/p2_reward_title.png"/>
+                </div>
+                <div class="dialog-body">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>獎勵項目</th>
+                        <th>獎勵數量</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                  </table>
+                  <div class="pagination">
+                    <button class="prevBtn">
+                      <img src="./img/icon/left_arrow_m.png" alt="上一頁" />
+                    </button>
+                    <div id="page-numbers"></div>
+                    <button class="nextBtn">
+                      <img src="./img/icon/right_arrow_m.png" alt="下一頁" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -365,28 +374,6 @@
           <div class="particles" style="opacity: 1">
             <div id="particle-snow"></div>
           </div>
-          <!-- <audio id="audioPlayer" controls style="display: none">
-            <source src="./music/bgm.mp3" type="audio/mp3" />
-          </audio>  -->
-          <!-- <div class="audiobg" style="_5d5aab89: #cfcfcf">
-            <button class="audio_toggle">
-              <div class="equalizer">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <p>
-                <span class="mask_text trs_width">
-                  <div></div>
-                </span>
-                <span class="status">
-                  Sound
-                  <div class="mask_text">off</div>
-                </span>
-              </p>
-            </button>
-          </div> -->
           <nav class="nav_side">
             <div>
               <ol>
@@ -490,8 +477,8 @@
                                   <span class="reward2_3"></span>
                                 </div>
                               </div>
-                              <!-- <div class="swiper-button-next"></div>
-                              <div class="swiper-button-prev"></div> -->
+                              <div class="swiper-button-next"></div>
+                              <div class="swiper-button-prev"></div>
                             </div>
                           </dl>
                           <dl class="reward3 visible_mobile">
@@ -518,7 +505,7 @@
                                   <i class="progress3"></i>
                                 </li>
                               </ol>
-                              <div class="swiper-child1-button-next"></div>
+                              <div class="swiper-child2-button-next"></div>
                               <div class="swiper-child2-button-prev"></div>
                             </div>
                           </dl>
@@ -603,7 +590,7 @@
                       playsinline=""
                       class="visible_roomy"
                     >
-                      <source src="./img/page5/bg_pc.mp4" />
+                      <source src="./img/page5/p5_bg_pc.mp4" />
                     </video>
                     <video
                       loop=""
@@ -612,7 +599,7 @@
                       playsinline=""
                       class="visible_mobile"
                     >
-                      <source src="./img/page5/bg_m.mp4" />
+                      <source src="./img/page5/p5_bg_m.mp4" />
                     </video>
                   </div>
                   <div class="content">
@@ -721,7 +708,7 @@
                             </div>
                           </div>
                           <div class="item item3">
-                            <img src="./img/page8/p9_d_char.png" />
+                            <img src="./img/page8/p8_item3_char.png" />
                             <div class="title">
                               <p class="t2">職業集中照顧</p>
                             </div>
@@ -729,6 +716,11 @@
                           <div class="item item4">
                             <div class="title">
                               <p class="t2">以太巨神</p>
+                            </div>
+                          </div>
+                          <div class="item item5">
+                            <div class="title">
+                              <p class="t2">新地區西吉爾</p>
                             </div>
                           </div>
                         </div>
