@@ -278,11 +278,11 @@ $(document).ready(() => {
     if ($(window).width() > 768) {
         pcSwiper();
         $('.section_main .content .video-open').on('click', () => {
-            openVideo("", "../img/page8/p8_pc.mp4");
+            openVideo("", "img/page8/p8_pc.mp4");
         });
 
         $('.section_soon .content .item.item1').on('click', () => {
-            openVideo("", "../img/page8/p8_pc.mp4");
+            openVideo("", "img/page8/p8_pc.mp4");
         });
     } else {
         $('.event_gnb').toggleClass('type_default');
@@ -290,11 +290,11 @@ $(document).ready(() => {
         mobileSwiper();
         p2Child2Swiper();
         $('.section_main .content .video-open').on('click', () => {
-            openVideo("", "../img/page8/p8_m.mp4");
+            openVideo("", "img/page8/p8_m.mp4");
         });
 
         $('.section_soon .content .item.item1').on('click', () => {
-            openVideo("", "../img/page8/p8_m.mp4");
+            openVideo("", "img/page8/p8_m.mp4");
         });
     }
     p2Child1Swiper();
@@ -502,7 +502,7 @@ const openVideo = (video, path) => {
             allowfullscreen></iframe>`);
     } else if (path) {
         $('.modal_source').append(
-            `<video class="modal_youtube youtube--2" loop="" autoplay="" playsinline="" controls="" controlslist="nodownload" preload="metadata"><source src=${path}></video>`);
+            `<video class="modal_youtube youtube--2" loop autoplay playsinline controls controlslist="nodownload" preload="metadata"><source src=${path}></video>`);
     }
 };
 
