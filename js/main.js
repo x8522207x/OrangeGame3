@@ -1,12 +1,12 @@
 let startY = 0;
-// (function (d) {
-//     var config = {
-//         kitId: 'gof2byk',
-//         scriptTimeout: 3000,
-//         async: true
-//     },
-//         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-// })(document);
+(function (d) {
+    var config = {
+        kitId: 'gof2byk',
+        scriptTimeout: 3000,
+        async: true
+    },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+})(document);
 
 $(document).ready(() => {
     $('.modal_wrap').css('display', 'none');
@@ -120,8 +120,6 @@ $(document).ready(() => {
                     });
                 },
                 slideChange: (swiper) => {
-                    // const removeAnimate = ['#p1Video', '.detail_p1', '.title', '.detail_p2', '.title', '.title_p2', '.dimmed_p2', '.title_p3', '.detail_p3', '.title_p4', '.bg_p4', '.visible-roomy'];
-                    // removeAnimate.forEach(ele => $(ele).removeClass('animate'));
                     ['active', 'point'].forEach(cl => ['.depth_1', '.depth_2'].forEach(ele => $(ele).removeClass(cl)));
                     $('.swiper-slide-page').off('scroll');
                     $('.swiper-slide-page').removeClass('scrollable');
