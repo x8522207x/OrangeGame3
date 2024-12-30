@@ -593,14 +593,14 @@ section.section_main .content .scroll {
 }
 
 .section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_2 {
-    background-image: url(../img/page2/p2_reward4.png);
+    background-image: url(../img/page2/p2_reward4_m.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_3 {
-    background-image: url(../img/page2/p2_reward5.png);
+    background-image: url(../img/page2/p2_reward5_m.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1374,7 +1374,7 @@ section.section_dungeon .content .sub_content .content_wrap {
         width: 7.131579vw;
         height: 4.157895vw;
         position: absolute;
-        margin-top: -15px;
+        margin-top: -5px;
     }
 
     .visible_mobile ol li .progress1 {

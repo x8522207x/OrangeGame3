@@ -383,6 +383,17 @@ $(document).ready(() => {
         const start = (currentPage - 1) * pageSize;
         const end = currentPage * pageSize;
         const pageData = data.slice(start, end);
+        if (currentPage === totalPages) {
+            $('.nextBtn').addClass('disabled');
+        } else {
+            $('.nextBtn').removeClass('disabled')
+        }
+
+        if (currentPage === 1) {
+            $('.prevBtn').addClass('disabled');
+        } else {
+            $('.prevBtn').removeClass('disabled')
+        }
 
         const tableBody = document.getElementById("table-body");
         tableBody.innerHTML = pageData.map((item) =>

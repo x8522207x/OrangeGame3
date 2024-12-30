@@ -356,7 +356,7 @@ html {
     border-radius: 3px;
     width: 100%;
     padding: 0px 24px;
-    background-color: black;
+    background-color: #000;
 }
 
 .modal .modal_dimmed,
@@ -514,16 +514,20 @@ html {
 }
 
 .closeBtn::after {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAzNSAzNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMi45MTY4MUwyLjkxNjYxIDAuMDAwMTU4MTcxTDM0Ljk5OTMgMzIuMDgzM0wzMi4wODI3IDM1TDAgMi45MTY4MVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yLjkxNzI3IDM0Ljk5OThMMC4wMDA2NTc2NjYgMzIuMDgzMkwzMi4wODM0IDBMMzUgMi45MTY2NUwyLjkxNzI3IDM0Ljk5OThaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+    background-image: url("../img/page2/reward_close.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     box-sizing: border-box;
     content: "";
     display: inline-flex;
     height: 44%;
     vertical-align: top;
     width: 44%;
+}
+
+.closeBtn:hover::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAzNSAzNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMi45MTY4MUwyLjkxNjYxIDAuMDAwMTU4MTcxTDM0Ljk5OTMgMzIuMDgzM0wzMi4wODI3IDM1TDAgMi45MTY4MVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yLjkxNzI3IDM0Ljk5OThMMC4wMDA2NTc2NjYgMzIuMDgzMkwzMi4wODM0IDBMMzUgMi45MTY2NUwyLjkxNzI3IDM0Ljk5OThaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
 }
 
 .dialog-header {
@@ -545,6 +549,7 @@ html {
     overflow-y: auto;
     font-family: "Noto Serif TC", serif;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .data-table {
@@ -559,7 +564,7 @@ html {
 
 .data-table tbody tr {
     color: #333;
-    background-color: white;
+    background-color: #776853;
     border-bottom: 1px solid #bfa578;
 }
 
@@ -589,6 +594,49 @@ html {
     background: none;
     border: none;
     cursor: pointer;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.pagination .prevBtn::after {
+    background-image: url("../img/page2/reward_arrow_left_active.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    content: "";
+    display: inline-flex;
+    height: 50%;
+    width: 50%;
+}
+
+.pagination .prevBtn.disabled::after {
+    background-image: url("../img/page2/reward_arrow_left.png");
+}
+
+.pagination .nextBtn::after {
+    background-image: url("../img/page2/reward_arrow_right_active.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    content: "";
+    display: inline-flex;
+    height: 50%;
+    width: 50%;
+}
+
+.pagination .nextBtn.disabled::after {
+    background-image: url("../img/page2/reward_arrow_right.png");
+}
+
+.pagination .prevBtn.disabled,
+.pagination .nextBtn.disabled {
+    cursor: default;
 }
 
 .pagination img {
@@ -602,13 +650,14 @@ html {
 
 .page-number {
     font-family: "Noto Serif TC", serif;
-    padding: 0px 10px;
+    padding: 0px 20px;
     margin-bottom: 10px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .page-number.active {
-    color: white;
+    color: #bfa578;
     font-weight: bold;
 }
 
@@ -1672,6 +1721,7 @@ button {
         overflow-y: auto;
         font-family: "Noto Serif TC", serif;
         font-size: 16px;
+        font-weight: bold;
     }
 }
 
