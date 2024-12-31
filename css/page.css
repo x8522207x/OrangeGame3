@@ -475,21 +475,35 @@ section.section_main .content .scroll {
 }
 
 .section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_1 {
-    background-image: url(../img/page2/p2_reward1.png);
+    background-image: url(../img/page2/p2_reward2.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_2 {
-    background-image: url(../img/page2/p1_block02\(目前為假圖\).png);
+    background-image: url(../img/page2/p2_reward2_2.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_3 {
-    background-image: url(../img/page2/p2_reward3.png);
+    background-image: url(../img/page2/p2_reward2_3.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_4 {
+    background-image: url(../img/page2/p2_reward2_4.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide span.reward2_5 {
+    background-image: url(../img/page2/p2_reward2_5.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
