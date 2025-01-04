@@ -448,9 +448,9 @@ section.section_main .content .scroll {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 156px;
+    height: 132px;
     margin-top: 37px;
-    width: 350px;
+    width: 386px;
 }
 
 .section_season .content .content_wrap>div {
@@ -631,7 +631,7 @@ section.section_main .content .scroll {
     background-size: contain;
     height: 125px;
     margin-top: 37px;
-    width: 254px;
+    width: 257px;
 }
 
 .section_newrealm .content .header .sub_title {
@@ -639,8 +639,8 @@ section.section_main .content .scroll {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 48px;
-    width: 350px;
+    height: 39px;
+    width: 392px;
 }
 
 .section_newrealm .content>*,
@@ -677,10 +677,10 @@ body .detail-link:hover {
     color: #0000 !important;
     display: inline-block;
     font-size: 0 !important;
-    height: 84px;
+    height: 76px;
     transition: background .2s ease;
     vertical-align: top;
-    width: 288px;
+    width: 253px;
     -webkit-text-size-adjust: none;
 }
 
@@ -689,9 +689,9 @@ section.section_dungeon .content .header .title {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 158px;
+    height: 133px;
     margin-top: -35px;
-    width: 363px;
+    width: 333px;
 }
 
 section.section_dungeon .content .header .sub_title {
@@ -699,8 +699,8 @@ section.section_dungeon .content .header .sub_title {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 30px;
-    width: 410px;
+    height: 22px;
+    width: 436px;
 }
 
 section.section_dungeon .content .sub_content .content_wrap {
@@ -727,9 +727,9 @@ section.section_dungeon .content .sub_content .content_wrap {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 240px;
+    height: 183px;
     /* margin-top: -65px; */
-    width: 650px;
+    width: 747px;
 }
 
 .section_ruin .content .header .description {
@@ -791,9 +791,9 @@ section.section_dungeon .content .sub_content .content_wrap {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 256px;
+    height: 212px;
     position: relative;
-    width: 100%;
+    width: 596px;
 }
 
 .section_pet .slider {
@@ -891,9 +891,9 @@ section.section_dungeon .content .sub_content .content_wrap {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 110px;
+    height: 103px;
     position: relative;
-    width: 100%;
+    width: 596px;
 }
 
 .section_equipment .content .sub_content {
@@ -1113,7 +1113,7 @@ section.section_dungeon .content .sub_content .content_wrap {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 555px;
+        height: 492px;
     }
 
     .section_pet .visual {
