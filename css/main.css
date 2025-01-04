@@ -318,6 +318,7 @@ html {
     min-height: 0;
     position: relative;
     width: auto;
+    padding-top: 36px;
 }
 
 .modal {
@@ -1520,10 +1521,6 @@ button {
     .modal_inner .modal_close {
         right: 24px;
         top: 14px;
-    }
-
-    #plate_modal .dialog_inner {
-        padding-top: 36px;
     }
 }
 

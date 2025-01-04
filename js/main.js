@@ -295,77 +295,23 @@ $(document).ready(() => {
     let currentPage = 1;
     const pageSize = 10;
     let data = [{
-        name: "英雄造型_坐騎招喚禮物選擇箱",
-        count: 188,
+        name: "投票獎勵_高級造型/坐騎召喚(11次)選擇箱",
+        count: 1,
     }, {
-        name: "閃亮的解除侵襲卷軸選擇箱",
-        count: 99,
+        name: "投票獎勵_稀有深淵石選擇箱",
+        count: 1,
     }, {
-        name: "Lv55英雄防具_飾品選擇箱",
-        count: 172,
+        name: "投票獎勵_強化卷軸選擇箱",
+        count: 1,
     }, {
-        name: "Lv55英雄特別的強化卷軸選擇箱",
-        count: 203,
+        name: "成就獎勵_高級精靈召喚",
+        count: 11,
     }, {
-        name: "稀有特別的武器強化卷軸",
-        count: 366,
+        name: "成就獎勵_高級坐騎召喚",
+        count: 11,
     }, {
-        name: "稀有特別的飾品強化卷軸",
-        count: 366,
-    }, {
-        name: "閃亮的解除侵蝕卷軸選擇箱",
-        count: 156,
-    }, {
-        name: "造型召喚最高級禮物(11次)",
-        count: 1107,
-    }, {
-        name: "Lv55英雄武器選擇箱",
-        count: 210,
-    }, {
-        name: "英雄造型_坐騎召喚禮物選擇箱",
-        count: 300,
-    }, {
-        name: "英雄造型_坐騎招喚禮物選擇箱",
-        count: 188,
-    }, {
-        name: "閃亮的解除侵襲卷軸選擇箱",
-        count: 99,
-    }, {
-        name: "Lv55英雄防具_飾品選擇箱",
-        count: 172,
-    }, {
-        name: "Lv55英雄特別的強化卷軸選擇箱",
-        count: 203,
-    }, {
-        name: "稀有特別的武器強化卷軸",
-        count: 366,
-    }, {
-        name: "稀有特別的飾品強化卷軸",
-        count: 366,
-    }, {
-        name: "閃亮的解除侵蝕卷軸選擇箱",
-        count: 156,
-    }, {
-        name: "造型召喚最高級禮物(11次)",
-        count: 1107,
-    }, {
-        name: "Lv55英雄武器選擇箱",
-        count: 210,
-    }, {
-        name: "英雄造型_坐騎召喚禮物選擇箱",
-        count: 300,
-    }, {
-        name: "Lv55英雄武器選擇箱",
-        count: 210,
-    }, {
-        name: "英雄造型_坐騎召喚禮物選擇箱",
-        count: 300,
-    }, {
-        name: "Lv55英雄武器選擇箱",
-        count: 210,
-    }, {
-        name: "英雄造型_坐騎召喚禮物選擇箱",
-        count: 300,
+        name: "成就獎勵_高級造型召喚",
+        count: 11,
     }]
     const totalPages = Math.ceil(data.length / pageSize);
 

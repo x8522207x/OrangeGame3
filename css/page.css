@@ -575,6 +575,7 @@ section.section_main .content .scroll {
 }
 
 .section_season .content .content_wrap .reward1 {
+    z-index: 2;
     background-image: url(../img/page2/p2_reward1.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -591,11 +592,10 @@ section.section_main .content .scroll {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     width: 30%;
-    max-width: 80px;
     aspect-ratio: 3 / 1;
 }
 
@@ -699,8 +699,8 @@ section.section_dungeon .content .header .sub_title {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 17px;
-    width: 363px;
+    height: 30px;
+    width: 410px;
 }
 
 section.section_dungeon .content .sub_content .content_wrap {
@@ -1068,7 +1068,7 @@ section.section_dungeon .content .sub_content .content_wrap {
         height: calc(100vw / 3);
         width: calc(100vw / 3);
         max-width: 350px;
-        max-height: 350px;
+        max-height: 315px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1164,21 +1164,21 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     section.section_main .content .subtitle {
-        height: 25px !important;
+        height: 50px !important;
         margin-top: 50px;
-        width: 119px !important;
+        width: 155px !important;
     }
 
     section.section_main .content .title {
-        height: 159px;
-        margin-bottom: -44px;
-        margin-top: -41px;
-        width: 340px;
+        height: 160px;
+        margin-bottom: -20px;
+        margin-top: -20px;
+        width: 310px;
     }
 
     section.section_main .content .date {
-        height: 27px;
-        width: 213px;
+        height: 37px;
+        width: 210px;
     }
 
     section.section_main .content .video-open {
@@ -1195,9 +1195,8 @@ section.section_dungeon .content .sub_content .content_wrap {
 
     .section_season .content .header .title {
         margin-top: 5px;
-        height: calc(100vw / 3);
-        max-height: 125px;
-        max-width: 500px;
+        height: 78px;
+        width: 191px;
     }
 
     .section_season .content .content_wrap .visible_roomy .reward3 {
@@ -1257,14 +1256,25 @@ section.section_dungeon .content .sub_content .content_wrap {
         cursor: pointer;
     }
 
-    .section_season .content .content_wrap .reward1,
-    .section_season .content .content_wrap .reward2,
-    .section_season .content .content_wrap .visible_mobile.reward3 {
-        height: calc((100vh - 165px)/3) !important;
+    .section_season .content .content_wrap .reward1 {
+        height: calc((100vh - 75px)/3) !important;
         width: calc((100vh - 165px)/3) !important;
         max-width: 300px !important;
         max-height: 300px !important;
         margin-bottom: -20px;
+    }
+
+    .section_season .content .content_wrap .reward2,
+    .section_season .content .content_wrap .visible_mobile.reward3 {
+        height: calc((100vh - 185px)/3) !important;
+        width: calc((100vh - 165px)/3) !important;
+        max-width: 300px !important;
+        max-height: 300px !important;
+        margin-bottom: -20px;
+    }
+
+    .section_season .content .content_wrap .reward1 {
+        background-image: url(../img/page2/p2_reward1_m.png);
     }
 
     .section_season .content .content_wrap .reward2 .nested-swiper-child1,
@@ -1322,13 +1332,14 @@ section.section_dungeon .content .sub_content .content_wrap {
 
     .section_newrealm .content .header .title {
         margin-top: 25px;
-        height: calc(100vw / 3);
-        max-height: 125px;
-        max-width: 500px;
+        height: 78px;
+        width: 191px;
     }
 
     .section_newrealm .content .header .sub_title {
-        height: 5vh;
+        height: 30px;
+        width: 290px;
+        margin-top: 15px;
     }
 
     .section_newrealm .content .sub_content .content_wrap {
@@ -1350,13 +1361,13 @@ section.section_dungeon .content .sub_content .content_wrap {
 
     .section_dungeon .content .header .title {
         margin-top: 30px !important;
-        width: 500px !important;
-        height: calc(100vw / 3) !important;
-        max-height: 125px;
+        height: 78px !important;
+        width: 191px !important;
     }
 
     .section_dungeon .content .header .sub_title {
         height: 5vh !important;
+        width: 360px !important;
     }
 
     .section_dungeon .content .sub_content .content_wrap {
@@ -1364,8 +1375,8 @@ section.section_dungeon .content .sub_content .content_wrap {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 95vw !important;
-        width: auto;
+        height: 425px !important;
+        width: 270px !important;
         margin-top: 15px;
     }
 
@@ -1388,7 +1399,7 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_ruin .content .sub_content .map {
-        background-size: contain !important;
+        background-size: cover !important;
         transform: translate(0%, 5%) !important;
         height: calc(99vw + 40px) !important;
         width: calc(147vw + 60px) !important;
@@ -1397,9 +1408,8 @@ section.section_dungeon .content .sub_content .content_wrap {
 
     .section_ruin .content .header .title {
         background-image: url(../img/page5/p5_main-msg_m.png);
-        height: calc(100vw / 3) !important;
-        margin-top: -50px !important;
-        width: 500px !important;
+        margin-top: -25px !important;
+        width: 100vw !important;
     }
 
     .section_ruin .content .header .description {
@@ -1465,12 +1475,13 @@ section.section_dungeon .content .sub_content .content_wrap {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 117.5px;
+        height: 73.5px;
+        width: 100vw;
     }
 
     .section_equipment .content .sub_content .item {
-        height: 84vw !important;
-        width: 93vw !important;
+        width: 345px !important;
+        height: 380px !important;
     }
 
     .section_soon .content .sub_content {
