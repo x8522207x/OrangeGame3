@@ -2,10 +2,12 @@ let startY = 0;
 
 $(document).ready(() => {
     $('.modal_wrap').css('display', 'none');
+    $('.dialog').css('display', 'none');
     setTimeout(() => {
         $('.loading').remove();
         $('.modal').toggleClass('hide');
         $('.modal_wrap').css('display', '');
+        $('.dialog').css('display', '');
     }, 1000);
 
     ['.event_banner', '.event_gnb_menu'].forEach(ele => $(ele).on('click', () => {
@@ -20,6 +22,8 @@ $(document).ready(() => {
         $('.plate_modal').toggleClass('-active');
         $('.modal.type--youtube').toggleClass('hide');
         $('.modal_box_veil').toggleClass('-hide');
+        $('.modal').css('opacity', '0');
+        $('.youtube--2').remove();
     });
 
     $('.prevBtn').on('click', () => {
@@ -183,16 +187,17 @@ $(document).ready(() => {
             on: {
                 init: (swiper) => {
                     $('.progress1').on('click', () => {
-                        swiper.slideTo(0);
+                        swiper.slideToLoop(0);
                     });
                     $('.progress2').on('click', () => {
-                        swiper.slideTo(1);
+                        swiper.slideToLoop(1);
                     });
                     $('.progress3').on('click', () => {
-                        swiper.slideTo(2);
+                        swiper.slideToLoop(2);
                     });
                 },
                 slideChange: (swiper) => {
+                    console.log(swiper.realIndex)
                     $('[class*=progress]').removeClass('active');
                     $(`.progress${swiper.realIndex + 1}`).toggleClass('active');
                 }
@@ -232,11 +237,11 @@ $(document).ready(() => {
             },
             loop: false,
             freeMode: {
-                enabled: false,
+                enabled: true,
                 sticky: false,
                 momentumBounce: false,
             },
-            slideActiveClass: 'animated',
+            // slideActiveClass: 'animated',
             autoHeight: true,
             speed: 1000,
             passiveListeners: false,
@@ -270,7 +275,7 @@ $(document).ready(() => {
     if ($(window).width() > 768) {
         pcSwiper();
         $('.section_main .content .video-open').on('click', () => {
-            openVideo("", "img/page8/p8_pc.mp4");
+            openVideo("HxC6wECJSCU");
         });
 
         $('.section_soon .content .item.item1').on('click', () => {
@@ -282,7 +287,7 @@ $(document).ready(() => {
         mobileSwiper();
         p2Child2Swiper();
         $('.section_main .content .video-open').on('click', () => {
-            openVideo("", "img/page8/p8_m.mp4");
+            openVideo("HxC6wECJSCU");
         });
 
         $('.section_soon .content .item.item1').on('click', () => {
@@ -295,23 +300,23 @@ $(document).ready(() => {
     let currentPage = 1;
     const pageSize = 10;
     let data = [{
-        name: "投票獎勵_高級造型/坐騎召喚(11次)選擇箱",
+        name: "投票獎勵_造型/坐騎召喚高級禮物(11次)選擇箱",
         count: 1,
     }, {
         name: "投票獎勵_稀有深淵石選擇箱",
         count: 1,
     }, {
-        name: "投票獎勵_強化卷軸選擇箱",
+        name: "投票獎勵_優質強化卷軸選擇箱",
+        count: 10,
+    }, {
+        name: "成就獎勵_精靈召喚高級禮物(11次)",
         count: 1,
     }, {
-        name: "成就獎勵_高級精靈召喚",
-        count: 11,
+        name: "成就獎勵_坐騎召喚高級禮物(11次)",
+        count: 1,
     }, {
-        name: "成就獎勵_高級坐騎召喚",
-        count: 11,
-    }, {
-        name: "成就獎勵_高級造型召喚",
-        count: 11,
+        name: "成就獎勵_造型召喚高級禮物(11次)",
+        count: 1,
     }]
     const totalPages = Math.ceil(data.length / pageSize);
 
@@ -445,11 +450,13 @@ const openVideo = (video, path) => {
 };
 
 function openDialog() {
+    $('.modal').css('opacity', '1').css('visibility', 'inherit');
     $('.modal.type--reward').toggleClass('hide');
     document.getElementById("dialog").style.display = "block";
 }
 
 function closeDialog() {
     $('.modal.type--reward').toggleClass('hide');
+    $('.modal').css('opacity', '0');
     document.getElementById("dialog").style.display = "none";
 }

@@ -461,10 +461,10 @@ section.section_main .content .scroll {
 
 .section_season .reward2 .swiper-container .swiper-wrapper .swiper-slide,
 .section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide {
-    height: calc(100vw / 3);
+    height: calc(100vw / 3* 1.182);
     width: calc(100vw / 3);
-    max-width: 350px;
-    max-height: 350px;
+    max-width: calc(315px* 1.182);
+    max-height: 315px;
     position: relative;
 }
 
@@ -510,7 +510,7 @@ section.section_main .content .scroll {
 }
 
 .section_season .reward3 .swiper-container .swiper-wrapper .swiper-slide span.reward3_1 {
-    background-image: url(../img/page2/p2_reward3.png);
+    background-image: url(../img/page2/p2_reward3_m.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -897,11 +897,11 @@ section.section_dungeon .content .sub_content .content_wrap {
 }
 
 .section_equipment .content .sub_content {
-    /* align-items: center; */
+    align-items: center;
     color: #0000 !important;
-    /* display: flex; */
+    display: flex;
     font-size: 0 !important;
-    /* justify-content: center; */
+    justify-content: center;
     -webkit-text-size-adjust: none;
 }
 
@@ -1060,15 +1060,24 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_season .content .content_wrap .reward1,
-    .section_season .content .content_wrap .reward2,
-    .section_season .content .content_wrap .visible_mobile.reward3,
+    .section_season .content .content_wrap .reward2 {
+        height: calc(100vw / 3* 1.182);
+        width: calc(100vw / 3);
+        max-width: calc(315px* 1.182);
+        max-height: 315px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
     .section_season .content .content_wrap .visible_roomy .reward3,
     .section_season .content .content_wrap .reward4,
     .section_season .content .content_wrap .reward5 {
-        height: calc(100vw / 3);
+        height: calc(100vw / 3* 1.182);
         width: calc(100vw / 3);
-        max-width: 350px;
-        max-height: 315px;
+        max-width: calc(350px* 1.182);
+        max-height: 350px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1135,6 +1144,18 @@ section.section_dungeon .content .sub_content .content_wrap {
 
     .section-pages>.swiper-wrapper>.swiper-slide {
         height: 100vh;
+    }
+
+    .swiper-container .swiper-slide-page:nth-child(2) {
+        min-height: clamp(0px, calc((100vw - 50px)* (823/742) + ((100vw - 50px)/ 1.169) + ((100vw - 50px)/ 1.063) + 83px + 4.157895vw), 5000px);
+    }
+
+    .swiper-container .swiper-slide-page:nth-child(3) {
+        min-height: clamp(0px, calc((100vw - 50px)* 1.261 + 230px), 2000px);
+    }
+
+    .swiper-container .swiper-slide-page:nth-child(4) {
+        min-height: clamp(0px, calc((100vw - 50px)* 1.583 + 214px + 5vh), 2000px);
     }
 
     section.area {
@@ -1257,20 +1278,18 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_season .content .content_wrap .reward1 {
-        height: calc((100vh - 75px)/3) !important;
-        width: calc((100vh - 165px)/3) !important;
-        max-width: 300px !important;
-        max-height: 300px !important;
-        margin-bottom: -20px;
+        height: calc((100vw - 50px)* (823/742)) !important;
+        width: calc(100vw - 50px) !important;
     }
 
-    .section_season .content .content_wrap .reward2,
+    .section_season .content .content_wrap .reward2 {
+        height: calc((100vw - 50px)/ 1.169) !important;
+        width: calc(100vw - 50px) !important;
+    }
+
     .section_season .content .content_wrap .visible_mobile.reward3 {
-        height: calc((100vh - 185px)/3) !important;
-        width: calc((100vh - 165px)/3) !important;
-        max-width: 300px !important;
-        max-height: 300px !important;
-        margin-bottom: -20px;
+        height: calc((100vw - 50px)/ 1.063) !important;
+        width: calc(100vw - 50px) !important;
     }
 
     .section_season .content .content_wrap .reward1 {
@@ -1285,10 +1304,17 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_season .content .content_wrap>div .swiper-slide {
-        height: calc((100vh - 165px)/3) !important;
-        width: calc((100vh - 165px)/3) !important;
-        max-width: 300px !important;
-        max-height: 300px !important;
+        height: calc((100vw - 50px)/ 1.169) !important;
+        width: calc(100vw - 50px) !important;
+        max-width: none !important;
+        max-height: none !important;
+    }
+
+    .section_season .content .content_wrap .visible_mobile .swiper-slide {
+        height: calc((100vw - 50px)/ 1.063) !important;
+        width: calc(100vw - 50px) !important;
+        max-width: none !important;
+        max-height: none !important;
     }
 
     .section_season ol li i {
@@ -1342,14 +1368,21 @@ section.section_dungeon .content .sub_content .content_wrap {
         margin-top: 15px;
     }
 
+    .section_newrealm .content .sub_content {
+        display: flex;
+        justify-content: center;
+    }
+
     .section_newrealm .content .sub_content .content_wrap {
         background-image: url(../img/page3/p3_content_m.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 95vw;
-        /* width: 350px; */
+        height: calc((100vw - 50px)* 1.261);
+        width: calc(100vw - 50px);
         margin-top: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .section_dungeon .visual {
@@ -1375,8 +1408,8 @@ section.section_dungeon .content .sub_content .content_wrap {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 425px !important;
-        width: 270px !important;
+        height: calc((100vw - 50px)* 1.583) !important;
+        width: calc(100vw - 50px) !important;
         margin-top: 15px;
     }
 
