@@ -1518,7 +1518,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 @media (min-width: 769px) and (max-width: 1280px) {
     .section_equipment .content .sub_content .item {
         height: 560px !important;
-        width: auto !important;
+        width: 616.6px !important;
     }
 
     .section_pet .slider .swiper-container .swiper-button-prev {
@@ -1650,7 +1650,7 @@ section.section_dungeon .content .sub_content .content_wrap {
 
     .section_equipment .content .sub_content .item {
         height: 642px;
-        width: auto;
+        width: 707px;
     }
 }
 
