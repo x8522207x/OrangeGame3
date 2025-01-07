@@ -1427,9 +1427,9 @@ section.section_dungeon .content .sub_content .content_wrap {
         width: 100vw !important;
     }
 
-    .section_ruin .content .header .title img{
+    .section_ruin .content .header .title img {
+        transform: translateZ(0);
         width: 100vw !important;
-        will-change: transform;
     }
 
     .section_ruin .content .header .description {
@@ -1437,7 +1437,6 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_ruin .content .sub_content {
-        will-change: transform;
         margin-top: -8vh;
     }
 
