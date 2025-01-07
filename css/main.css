@@ -935,6 +935,10 @@ html {
     mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA0OSA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00OSA2LjA5NTI0SDBWMEg0OVY2LjA5NTI0Wk0yNC41NzcgMTAuOTI4OUw0OC4yNTcgMzQuNDkzOEw0My45MjYgMzguODAzOEwyNy41NjI1IDIyLjUxOThWNjRIMjEuNDM3NUwyMS40Mzc1IDIyLjY3MzFMNS4yMjgwMSAzOC44MDM4TDAuODk2OTg2IDM0LjQ5MzhMMjQuNTc3IDEwLjkyODlaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K)
 }
 
+#plate_page {
+    min-height: var(--maxvh);
+}
+
 .event_gnb {
     align-items: center;
     box-sizing: border-box;

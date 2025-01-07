@@ -1,10 +1,6 @@
 let startY = 0;
 
 $(document).ready(() => {
-    function updateMaxVH() {
-        location.reload();
-    }
-
     window.addEventListener('resize', updateMaxVH);
 
     $('.modal_wrap').css('display', 'none');
@@ -48,8 +44,10 @@ $(document).ready(() => {
         openDialog();
     });
 
+    let pcSwiperPage, p2Child1SwiperPage, p2Child2SwiperPage, p6SwiperPage, mobileSwiperPage;
+
     const pcSwiper = () => {
-        const swiper = new Swiper('.section-pages', {
+        pcSwiperPage = new Swiper('.section-pages', {
             direction: 'vertical',
             touchReleaseOnEdges: true,
             mousewheel: {
@@ -142,17 +140,17 @@ $(document).ready(() => {
         });
 
         $('.swiper-slide-page')[0].classList.add('scrollable');
-        swiper.slideTo(0);
+        pcSwiperPage.slideTo(0);
         $('.depth_1')[0].classList.add('active');
         $('.depth_1')[0].classList.add('point');
 
         for (let i = 0; i < 8; i++) {
-            addPageClick(i, swiper);
+            addPageClick(i, pcSwiperPage);
         }
     };
 
     const p2Child1Swiper = () => {
-        new Swiper('.nested-swiper-child1', {
+        p2Child1SwiperPage = new Swiper('.nested-swiper-child1', {
             direction: 'horizontal',
             slidesPerView: 1,
             mousewheel: {
@@ -173,7 +171,7 @@ $(document).ready(() => {
     };
 
     const p2Child2Swiper = () => {
-        new Swiper('.nested-swiper-child2', {
+        p2Child2SwiperPage = new Swiper('.nested-swiper-child2', {
             direction: 'horizontal',
             slidesPerView: 1,
             mousewheel: {
@@ -211,7 +209,7 @@ $(document).ready(() => {
     };
 
     const p6Swiper = () => {
-        new Swiper('.nested-swiper', {
+        p6SwiperPage = new Swiper('.nested-swiper', {
             direction: 'horizontal',
             slidesPerView: 1,
             mousewheel: {
@@ -232,7 +230,7 @@ $(document).ready(() => {
     };
 
     const mobileSwiper = () => {
-        new Swiper('.section-pages', {
+        mobileSwiperPage = new Swiper('.section-pages', {
             direction: 'vertical',
             slidesPerView: "auto",
             touchReleaseOnEdges: true,
@@ -278,6 +276,8 @@ $(document).ready(() => {
     };
 
     if ($(window).width() > 768) {
+        $('.event_gnb').addClass('type_clear');
+        $('.event_gnb').removeClass('type_default');
         pcSwiper();
         $('.section_main .content .video-open').on('click', () => {
             openVideo("HxC6wECJSCU");
@@ -287,8 +287,8 @@ $(document).ready(() => {
             openVideo("", "img/page8/p8_pc.mp4");
         });
     } else {
-        $('.event_gnb').toggleClass('type_default');
-        $('.event_gnb').toggleClass('type_clear');
+        $('.event_gnb').addClass('type_default');
+        $('.event_gnb').removeClass('type_clear');
         mobileSwiper();
         p2Child2Swiper();
         $('.section_main .content .video-open').on('click', () => {
@@ -301,6 +301,47 @@ $(document).ready(() => {
     }
     p2Child1Swiper();
     p6Swiper();
+
+    function updateMaxVH() {
+        const root = document.documentElement;
+        const newMaxVh = window.innerHeight + 'px';
+        root.style.setProperty('--maxvh', newMaxVh);
+        if ($(window).width() > 768) {
+            $('.event_gnb').addClass('type_clear');
+            $('.event_gnb').removeClass('type_default');
+            if (pcSwiperPage) {
+                setTimeout(() => { pcSwiperPage.update(); }, 100);
+
+            } else {
+                pcSwiper();
+            }
+        } else {
+            $('.event_gnb').addClass('type_default');
+            $('.event_gnb').removeClass('type_clear');
+            if (mobileSwiperPage) {
+                mobileSwiperPage.update();
+            } else {
+                mobileSwiper();
+            }
+
+            if (p2Child2SwiperPage) {
+                p2Child2SwiperPage.update();
+            } else {
+                p2Child2Swiper();
+            }
+        }
+        // location.reload();
+        if (p2Child1SwiperPage) {
+            p2Child1SwiperPage.update();
+        } else {
+            p2Child1Swiper()
+        }
+        if (p6SwiperPage) {
+            p6SwiperPage.update();
+        } else {
+            p6Swiper();
+        }
+    }
 
     let currentPage = 1;
     const pageSize = 10;

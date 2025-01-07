@@ -1,6 +1,7 @@
 .page_events_sunkeeper {
     background-color: #333;
     box-sizing: border-box;
+    height: var(--maxvh);
 }
 
 [class*=page_] {
@@ -128,7 +129,7 @@
 .section-pages {
     box-sizing: border-box;
     max-height: var(--maxvh);
-    position: relative;
+    /* position: relative; */
 }
 
 .section-pages {
