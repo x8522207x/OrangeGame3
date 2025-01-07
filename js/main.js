@@ -1,6 +1,12 @@
 let startY = 0;
 
 $(document).ready(() => {
+    function updateMaxVH() {
+        location.reload();
+    }
+
+    window.addEventListener('resize', updateMaxVH);
+
     $('.modal_wrap').css('display', 'none');
     $('.dialog').css('display', 'none');
     setTimeout(() => {
