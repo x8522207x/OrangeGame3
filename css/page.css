@@ -1127,7 +1127,7 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .swiper-container .swiper-slide-page:nth-child(2) {
-        min-height: clamp(0px, calc((100vw - 50px)* (823/742) + ((100vw - 50px)/ 1.169) + ((100vw - 50px)/ 1.063) + 83px + 4.157895vw), 5000px);
+        min-height: clamp(0px, calc((100vw - 50px + 3.398058vw)* (823/742) + ((100vw - 50px)/ 1.169) + ((100vw - 50px)/ 1.063) + 83px + 4.157895vw), 5000px);
     }
 
     .swiper-container .swiper-slide-page:nth-child(3) {
@@ -1257,8 +1257,9 @@ section.section_dungeon .content .sub_content .content_wrap {
     }
 
     .section_season .content .content_wrap .reward1 {
-        height: calc((100vw - 50px)* (823/742)) !important;
-        width: calc(100vw - 50px) !important;
+        height: calc((100vw - 50px + 3.398058vw)* (823/742)) !important;
+        width: calc(100vw - 50px + 3.398058vw) !important;
+        right: 1.699029vw;
     }
 
     .section_season .content .content_wrap .reward2 {
