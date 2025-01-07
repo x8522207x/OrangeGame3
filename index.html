@@ -1,761 +1,571 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="666" />
-    <meta property="og:image:height" content="364" />
-    <meta
-      property="og:title"
-      content="波拉西亞戰記｜第3季「千年廢墟」決死瞬間揭幕！"
-    />
-    <meta
-      property="og:description"
-      content="新伺服器「斯拉普耶」開放，探索時空縫隙的千年廢墟，解鎖全新裝備與成長體驗！"
-    />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>波拉西亞戰記｜第3季「千年廢墟」決死瞬間揭幕！</title>
-    <link
-      rel="mask-icon"
-      href="img/icon/safari-pinned-tab.svg"
-      color="#162c32"
-    />
-    <link rel="shortcut icon" href="img/icon/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&family=Syne:wght@800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/page.css" />
-    <script
-      type="text/javascript"
-      src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js"
-      id="game-footer"
-      prod="波拉西亞"
-      theme="dark"
-      defer
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://tw.beanfun.com/js/GA_CodeNew.js"
-      defer
-    ></script>
-    <script src="js/main.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="666" />
+  <meta property="og:image:height" content="364" />
+  <meta property="og:title" content="波拉西亞戰記｜第3季「千年廢墟」決死瞬間揭幕！" />
+  <meta property="og:description" content="新伺服器「斯拉普耶」開放，探索時空縫隙的千年廢墟，解鎖全新裝備與成長體驗！" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>波拉西亞戰記｜第3季「千年廢墟」決死瞬間揭幕！</title>
+  <link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#162c32" />
+  <link rel="shortcut icon" href="img/icon/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&family=Syne:wght@800&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <body>
-    <div id="app">
-      <div id="plate_base">
-        <div class="scrollbar -none">
-          <div class="scrollbar_thumb">
-            <span></span>
-          </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/page.css" />
+  <script type="text/javascript" src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js" id="game-footer"
+    prod="波拉西亞" theme="dark" defer></script>
+  <script type="text/javascript" src="https://tw.beanfun.com/js/GA_CodeNew.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="plate_base">
+      <div class="scrollbar -none">
+        <div class="scrollbar_thumb">
+          <span></span>
         </div>
-        <div class="cursor"></div>
       </div>
-      <div id="plate_modal">
-        <div class="modal type--reward">
-          <div
-            class="modal_dimmed"
-            style="background-color: rgba(0, 0, 0, 0.8)"
-          ></div>
-          <div
-            id="dialog"
-            style="
+      <div class="cursor"></div>
+    </div>
+    <div id="plate_modal">
+      <div class="modal type--reward">
+        <div class="modal_dimmed" style="background-color: rgba(0, 0, 0, 0.8)"></div>
+        <div id="dialog" style="
               translate: none;
               rotate: none;
               scale: none;
               transform: translate(0px, 0px);
-            "
-            class="dialog"
-          >
-            <div class="dialog_inner">
-              <button class="closeBtn"></button>
-              <div class="dialog-content">
-                <div class="dialog-header">
-                  <img src="./img/page2/p2_reward_title.png" />
-                </div>
-                <div class="dialog-body">
-                  <table class="data-table">
-                    <thead>
-                      <tr>
-                        <th>獎勵項目</th>
-                        <th>獎勵數量</th>
-                      </tr>
-                    </thead>
-                    <tbody id="table-body"></tbody>
-                  </table>
-                  <div class="pagination">
-                    <button class="prevBtn" style="visibility: hidden"></button>
-                    <div id="page-numbers"></div>
-                    <button class="nextBtn" style="visibility: hidden"></button>
-                  </div>
+            " class="dialog">
+          <div class="dialog_inner">
+            <button class="closeBtn"></button>
+            <div class="dialog-content">
+              <div class="dialog-header">
+                <img src="./img/page2/p2_reward_title.png" />
+              </div>
+              <div class="dialog-body">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>獎勵項目</th>
+                      <th>獎勵數量</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-body"></tbody>
+                </table>
+                <div class="pagination">
+                  <button class="prevBtn" style="visibility: hidden"></button>
+                  <div id="page-numbers"></div>
+                  <button class="nextBtn" style="visibility: hidden"></button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal type--youtube">
-          <div
-            class="modal_dimmed"
-            style="background-color: rgba(0, 0, 0, 0.8)"
-          >
-            <div class="loading">
-              <div
-                class="spinner_wave_dots"
-                style="--42f2e9e9: rgba(100, 100, 100, 1)"
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+      </div>
+      <div class="modal type--youtube">
+        <div class="modal_dimmed" style="background-color: rgba(0, 0, 0, 0.8)">
+          <div class="loading">
+            <div class="spinner_wave_dots" style="--42f2e9e9: rgba(100, 100, 100, 1)">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
-          <div
-            class="modal_wrap"
-            style="
+        </div>
+        <div class="modal_wrap" style="
               translate: none;
               rotate: none;
               scale: none;
               transform: translate(0px, 0px);
-            "
-          >
-            <div class="modal_inner">
-              <div class="modal_box">
-                <div class="modal_box_theme"></div>
-                <div class="modal_box_veil">
-                  <div
-                    class="spinner_wave_dots"
-                    style="--42f2e9e9: rgba(100, 100, 100, 1)"
-                  >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-                <div class="modal_source">
-                  <span
-                    class="modal_source_ratio"
-                    style="padding-top: 56.4945%"
-                  ></span>
+            ">
+          <div class="modal_inner">
+            <div class="modal_box">
+              <div class="modal_box_theme"></div>
+              <div class="modal_box_veil">
+                <div class="spinner_wave_dots" style="--42f2e9e9: rgba(100, 100, 100, 1)">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
-              <button class="modal_close">
-                <span></span>
-              </button>
+              <div class="modal_source">
+                <span class="modal_source_ratio" style="padding-top: 56.4945%"></span>
+              </div>
             </div>
+            <button class="modal_close">
+              <span></span>
+            </button>
           </div>
         </div>
-        <div id="toast_area"></div>
       </div>
-      <div id="plate_nav">
-        <div class="nav_top">
-          <div
-            class="event_gnb type_clear"
-            style="
+      <div id="toast_area"></div>
+    </div>
+    <div id="plate_nav">
+      <div class="nav_top">
+        <div class="event_gnb type_clear" style="
               --75824c3e: rgba(27, 30, 34, 1);
               --47759c69: rgba(255, 255, 255, 1);
               --028dbcb1: rgba(122, 99, 67, 1);
               --aa46ff86: rgba(0, 0, 0, 1);
               --4fcf305d: rgba(255, 255, 255, 1);
               --2c0e22cd: rgba(122, 99, 67, 0.05);
-            "
-          >
-            <div class="event_gnb_default">
-              <div class="event_gnb_default_wrap">
-                <div class="event_gnb_default_left">
-                  <button class="event_gnb_menu">
-                    <span></span>
-                  </button>
-                  <a
-                    href="https://warsofprasia.beanfun.com/Main"
-                    class="event_gnb_logo"
-                    target="_self"
-                  >
-                    <img src="img/icon/LOGO-tw.png" class="icon" />
-                    <img src="img/icon/LOGO.png" class="mobile_icon" />
-                  </a>
-                </div>
-                <div class="event_gnb_default_right">
-                  <div class="event_gnb_gamestart">
-                    <button>GAME START</button>
-                  </div>
-                  <div class="event_gnb_links">
-                    <ul>
-                      <li>
-                        <a
-                          href="https://warsofprasia.beanfun.com/Main"
-                          target="_self"
-                        >
-                          <i class="i--home -box"></i>
-                          <span></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.facebook.com/warsofprasia.tw"
-                          target="_self"
-                        >
-                          <i class="i--logo-fb -box"></i>
-                          <span></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.youtube.com/@user-warsofprasia"
-                          target="_self"
-                        >
-                          <i class="i--logo-youtube -box"></i>
-                          <span></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="event_gnb_teleport"></div>
-          </div>
-          <div id="nav_top_teleport"></div>
-        </div>
-        <button class="gotop">
-          <i class="i--gotop"></i>
-        </button>
-        <div class="event_banner" style="--618ead0a: 95px">
-          <span class="event_banner_dimmed"></span>
-          <div class="event_banner_content" style="margin-top: 0px">
-            <div class="event_banner_menu">
-              <button class="event_banner_menu_button">
-                <span>活動</span>
-              </button>
-            </div>
-            <div class="event_banner_content_wrap">
-              <a
-                href="https://warsofprasia.beanfun.com/Main"
-                class="event_banner_home"
-                target="_self"
-              >
-                <div class="logo">
+            ">
+          <div class="event_gnb_default">
+            <div class="event_gnb_default_wrap">
+              <div class="event_gnb_default_left">
+                <button class="event_gnb_menu">
                   <span></span>
-                  <img
-                    src="img/icon/LOGO-tw.png"
-                    alt=""
-                    class="visible_roomy"
-                  />
-                  <img
-                    src="img/icon/LOGO-tw.png"
-                    alt=""
-                    class="visible_mobile"
-                  />
+                </button>
+                <a href="https://warsofprasia.beanfun.com/Main" class="event_gnb_logo" target="_self">
+                  <img src="img/icon/LOGO-tw.png" class="icon" />
+                  <img src="img/icon/LOGO.png" class="mobile_icon" />
+                </a>
+              </div>
+              <div class="event_gnb_default_right">
+                <div class="event_gnb_gamestart">
+                  <button>GAME START</button>
                 </div>
-              </a>
-              <div class="event_banner_list">
-                <ul>
-                  <li>
-                    <a
-                      href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10634"
-                      class="event_banner_item"
-                      target="_self"
-                    >
-                      <div class="image">
-                        <img src="img/icon/banner_01.jpg" alt="" />
-                      </div>
-                      <div class="content">直升30等</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10884"
-                      class="event_banner_item"
-                      target="_self"
-                    >
-                      <div class="image">
-                        <img src="img/icon/banner_02.jpg" alt="" />
-                      </div>
-                      <div class="content">波拉魂養成班</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10872"
-                      class="event_banner_item"
-                      target="_self"
-                    >
-                      <div class="image">
-                        <img src="img/icon/banner_03.jpg" alt="" />
-                      </div>
-                      <div class="content">特別 WP Coupon</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10431"
-                      class="event_banner_item"
-                      target="_self"
-                    >
-                      <div class="image">
-                        <img src="img/icon/banner_04.jpg" alt="" />
-                      </div>
-                      <div class="content">10% 紅利回饋</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20241105J/index.html"
-                      class="event_banner_item"
-                      target="_self"
-                    >
-                      <div class="image">
-                        <img src="img/icon/banner_05.jpg" alt="" />
-                      </div>
-                      <div class="content">新地區：克隆</div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="event_banner_store">
-                <a
-                  href="https://play.google.com/store/apps/details?hl=zh-TW&id=com.gamania.twp&referrer=adjust_reftag%3Dc1yWGEH0cDaIG%26utm_source%3D%25E6%25AD%25A3%25E5%25BC%258F%25E5%25AE%2598%25E7%25B6%25B2_AOS"
-                  target="_self"
-                >
-                  <img
-                    src="img/icon/btn-download-gp.png"
-                    alt="Google Play下載"
-                  />
-                </a>
-                <a
-                  href="https://apps.apple.com/tw/app/%E6%B3%A2%E6%8B%89%E8%A5%BF%E4%BA%9E%E6%88%B0%E8%A8%98/id6451229143"
-                  target="_self"
-                >
-                  <img
-                    src="img/icon/btn-download-as.png"
-                    alt="Apple Store下載"
-                  />
-                </a>
-                <a
-                  href="https://warsofprasia.beanfun.com/Download?downloadTarget=1"
-                  target="_self"
-                >
-                  <img src="img/icon/btn-download-pc.png" alt="PC下載" />
-                </a>
+                <div class="event_gnb_links">
+                  <ul>
+                    <li>
+                      <a href="https://warsofprasia.beanfun.com/Main" target="_self">
+                        <i class="i--home -box"></i>
+                        <span></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.facebook.com/warsofprasia.tw" target="_self">
+                        <i class="i--logo-fb -box"></i>
+                        <span></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.youtube.com/@user-warsofprasia" target="_self">
+                        <i class="i--logo-youtube -box"></i>
+                        <span></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+          <div class="event_gnb_teleport"></div>
         </div>
+        <div id="nav_top_teleport"></div>
       </div>
-      <div
-        id="plate_page"
-        style="--72516594: 0px; --9617c380: 0px; --cfc4fde0: 0px"
-      >
-        <div class="page_events_sunkeeper">
-          <div class="particles" style="opacity: 1">
-            <div id="particle-snow"></div>
+      <button class="gotop">
+        <i class="i--gotop"></i>
+      </button>
+      <div class="event_banner" style="--618ead0a: 95px">
+        <span class="event_banner_dimmed"></span>
+        <div class="event_banner_content" style="margin-top: 0px">
+          <div class="event_banner_menu">
+            <button class="event_banner_menu_button">
+              <span>活動</span>
+            </button>
           </div>
-          <nav class="nav_side">
-            <div>
-              <ol>
-                <li class="depth_1">
-                  <button class="page_p1">EP.3 生死一瞬</button>
+          <div class="event_banner_content_wrap">
+            <a href="https://warsofprasia.beanfun.com/Main" class="event_banner_home" target="_self">
+              <div class="logo">
+                <span></span>
+                <img src="img/icon/LOGO-tw.png" alt="" class="visible_roomy" />
+                <img src="img/icon/LOGO-tw.png" alt="" class="visible_mobile" />
+              </div>
+            </a>
+            <div class="event_banner_list">
+              <ul>
+                <li>
+                  <a href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10634"
+                    class="event_banner_item" target="_self">
+                    <div class="image">
+                      <img src="img/icon/banner_01.jpg" alt="" />
+                    </div>
+                    <div class="content">直升30等</div>
+                  </a>
                 </li>
-                <li class="depth_1">
-                  <button class="page_p2">紀念更新獎勵</button>
+                <li>
+                  <a href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10884"
+                    class="event_banner_item" target="_self">
+                    <div class="image">
+                      <img src="img/icon/banner_02.jpg" alt="" />
+                    </div>
+                    <div class="content">波拉魂養成班</div>
+                  </a>
                 </li>
-                <li class="depth_1">
-                  <button class="page_p3">新世界：斯拉普耶</button>
+                <li>
+                  <a href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10872"
+                    class="event_banner_item" target="_self">
+                    <div class="image">
+                      <img src="img/icon/banner_03.jpg" alt="" />
+                    </div>
+                    <div class="content">特別 WP Coupon</div>
+                  </a>
                 </li>
-                <li class="depth_1">
-                  <button class="page_p4">旅團副本：創造庭園</button>
+                <li>
+                  <a href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10431"
+                    class="event_banner_item" target="_self">
+                    <div class="image">
+                      <img src="img/icon/banner_04.jpg" alt="" />
+                    </div>
+                    <div class="content">10% 紅利回饋</div>
+                  </a>
                 </li>
-                <li class="depth_1">
-                  <button class="page_p5">時空縫隙：千年廢墟</button>
+                <li>
+                  <a href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20241105J/index.html"
+                    class="event_banner_item" target="_self">
+                    <div class="image">
+                      <img src="img/icon/banner_05.jpg" alt="" />
+                    </div>
+                    <div class="content">新地區：克隆</div>
+                  </a>
                 </li>
-                <li class="depth_1">
-                  <button class="page_p6">新系統：精靈</button>
-                </li>
-                <li class="depth_1">
-                  <button class="page_p7">新裝備：護臂與胸針</button>
-                </li>
-                <li class="depth_1">
-                  <button class="page_p8">預計更新內容</button>
-                </li>
-              </ol>
+              </ul>
             </div>
-          </nav>
-          <div class="section-pages swiper-container">
-            <div class="page-group swiper-wrapper">
-              <div
-                class="swiper-slide swiper-slide-page"
-                data-title="EP.3 生死一瞬"
-              >
-                <section
-                  class="section_main area"
-                  style="transform: translate3d(0px, 0%, 0px)"
-                >
-                  <div class="visual">
-                    <span class="dimmed"></span>
-                    <video
-                      loop=""
-                      autoplay=""
-                      muted=""
-                      playsinline=""
-                      class="visible_roomy"
-                    >
-                      <source
-                        src="./img/page1/hero_loop.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                    <video
-                      loop=""
-                      autoplay=""
-                      muted=""
-                      playsinline=""
-                      class="visible_mobile"
-                    >
-                      <source
-                        src="./img/page1/bg_mobile.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </div>
-                  <div class="content">
-                    <div class="content_wrap">
-                      <p class="subtitle"></p>
-                      <h2 class="title"></h2>
-                      <p class="date"></p>
-                      <button class="video-open"></button>
-                      <button class="scroll"></button>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div
-                data-title="紀念更新獎勵"
-                class="swiper-slide swiper-slide-page"
-              >
-                <section class="section_season area">
-                  <div class="visual">
-                    <span class="bg"></span>
-                  </div>
-                  <div class="content">
-                    <div class="header">
-                      <div class="title"></div>
-                    </div>
-                    <div class="sub_content">
-                      <div class="content_wrap">
-                        <div>
-                          <dl class="reward1">
-                            <button class="reward_btn"></button>
-                          </dl>
-                          <dl class="reward2">
-                            <div class="swiper-container nested-swiper-child1">
-                              <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                  <span class="reward2_1"></span>
-                                </div>
-                                <div class="swiper-slide">
-                                  <span class="reward2_2"></span>
-                                </div>
-                                <div class="swiper-slide">
-                                  <span class="reward2_3"></span>
-                                </div>
-                                <div class="swiper-slide">
-                                  <span class="reward2_4"></span>
-                                </div>
-                                <div class="swiper-slide">
-                                  <span class="reward2_5"></span>
-                                </div>
-                              </div>
-                              <div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                              </div>
-                            </div>
-                          </dl>
-                          <dl class="reward3 visible_mobile">
-                            <div class="swiper-container nested-swiper-child2">
-                              <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                  <span class="reward3_1"></span>
-                                </div>
-                                <div class="swiper-slide">
-                                  <span class="reward3_2"></span>
-                                </div>
-                                <div class="swiper-slide">
-                                  <span class="reward3_3"></span>
-                                </div>
-                              </div>
-                              <div>
-                                <ol>
-                                  <li>
-                                    <i class="progress1"></i>
-                                  </li>
-                                  <li>
-                                    <i class="progress2"></i>
-                                  </li>
-                                  <li>
-                                    <i class="progress3"></i>
-                                  </li>
-                                </ol>
-                              </div>
-                              <div class="swiper-child2-button-next"></div>
-                              <div class="swiper-child2-button-prev"></div>
-                            </div>
-                          </dl>
-                        </div>
-                        <div class="visible_roomy">
-                          <dl class="reward3"></dl>
-                          <dl class="reward4"></dl>
-                          <dl class="reward5"></dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div
-                data-title="新伺服器：斯拉普耶"
-                class="swiper-slide swiper-slide-page"
-              >
-                <section class="section_newrealm area">
-                  <div class="visual">
-                    <div class="dimmed"></div>
-                  </div>
-                  <div class="content">
-                    <div class="header">
-                      <div class="title"></div>
-                      <div class="sub_title"></div>
-                    </div>
-                    <div class="sub_content">
-                      <div class="content_wrap"></div>
-                    </div>
-                    <div class="btn_div">
-                      <a
-                        href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12231"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        class="detail-link"
-                      >
-                      </a>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div
-                data-title="旅團副本：創造庭園"
-                class="swiper-slide swiper-slide-page"
-              >
-                <section class="section_dungeon area">
-                  <div class="visual">
-                    <div class="dimmed"></div>
-                  </div>
-                  <div class="content">
-                    <div class="header" style="margin-bottom: 10px">
-                      <div class="title"></div>
-                      <div class="sub_title"></div>
-                    </div>
-                    <div class="sub_content">
-                      <div class="content_wrap"></div>
-                    </div>
-                    <div class="btn_div">
-                      <a
-                        href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12232"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        class="detail-link"
-                      >
-                      </a>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div
-                data-title="時空縫隙：千年廢墟"
-                class="swiper-slide swiper-slide-page"
-              >
-                <section class="section_ruin area">
-                  <div class="visual">
-                    <span class="bg"></span>
-                    <video
-                      loop=""
-                      autoplay=""
-                      muted=""
-                      playsinline=""
-                      class="visible_roomy"
-                    >
-                      <source src="./img/page5/p5_bg_pc.mp4" type="video/mp4" />
-                    </video>
-                    <video
-                      loop=""
-                      autoplay=""
-                      muted=""
-                      playsinline=""
-                      class="visible_mobile"
-                      style="backface-visibility: hidden;"
-                    >
-                      <source src="./img/page5/p5_bg_m.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                  <div class="content">
-                    <div class="header">
-                      <div class="title">
-                        <img
-                          src="img/page5/p5_main-msg_m.png"
-                          class="visible_mobile"
-                          style="backface-visibility: hidden;"
-                        />
-                        <img
-                          src="img/page5/p5_main-msg.png"
-                          class="visible_roomy"
-                        />
-                      </div>
-                    </div>
-                    <div class="sub_content">
-                      <div class="map"></div>
-                      <ul class="items">
-                        <li class="item item1"></li>
-                        <li class="item item2"></li>
-                        <li class="item item3"></li>
-                      </ul>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div
-                data-title="新系統：精靈"
-                class="swiper-slide swiper-slide-page"
-              >
-                <section
-                  class="section_pet area"
-                  style="
-                    transform: translate3d(0px, 0%, 0px);
-                    transition-duration: 0ms;
-                  "
-                >
-                  <div class="visual"></div>
-                  <div class="content">
-                    <div class="header">
-                      <div class="title"></div>
-                    </div>
-                    <div class="sub_content">
-                      <div class="slider">
-                        <div
-                          class="swiper-container swiper-fade swiper-initialized swiper-horizontal swiper-autoheight swiper-watch-progress swiper-backface-hidden nested-swiper"
-                        >
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <span class="n--2"></span>
-                            </div>
-                            <div class="swiper-slide">
-                              <span class="n--1"></span>
-                            </div>
-                          </div>
-                          <button
-                            class="swiper-button-prev"
-                            tabindex="0"
-                            aria-label="Previous slide"
-                          ></button>
-                          <button
-                            class="swiper-button-next"
-                            tabindex="0"
-                            aria-label="Next slide"
-                          ></button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="detail" style="height: 100px"></div>
-                  </div>
-                </section>
-              </div>
-              <div
-                data-title="新裝備：護臂與胸針"
-                class="swiper-slide swiper-slide-page"
-              >
-                <section class="section_equipment area">
-                  <div class="visual">
-                    <span class="bg"></span>
-                  </div>
-                  <div class="content">
-                    <div class="header">
-                      <div class="title"></div>
-                    </div>
-                    <div class="sub_content">
-                      <div class="item item1"></div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div
-                data-title="預計更新內容"
-                class="swiper-slide swiper-slide-page"
-              >
-                <section class="section_soon area">
-                  <div class="visual">
-                    <span class="bg"></span>
-                  </div>
-                  <div class="content">
-                    <div class="content_wrap">
-                      <div class="header">
-                        <h2 class="title">COMING SOON</h2>
-                      </div>
-                      <div class="sub_content">
-                        <div class="items">
-                          <div class="item item1">
-                            <div class="title">
-                              <p class="t1">時空縫隙3地區</p>
-                              <p class="t2">忘卻古城</p>
-                            </div>
-                          </div>
-                          <div class="item item2">
-                            <div class="title">
-                              <p class="t2">新地區西吉爾</p>
-                            </div>
-                          </div>
-                          <div class="item item3">
-                            <img src="./img/page8/p8_item3_char.png" />
-                            <div class="title">
-                              <p class="t2">職業集中照顧</p>
-                            </div>
-                          </div>
-                          <div class="item item4">
-                            <div class="title">
-                              <p class="t2">以太巨神</p>
-                            </div>
-                          </div>
-                          <div class="item item5">
-                            <div class="title">
-                              <p class="t2">新地區西吉爾</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
+            <div class="event_banner_store">
+              <a href="https://play.google.com/store/apps/details?hl=zh-TW&id=com.gamania.twp&referrer=adjust_reftag%3Dc1yWGEH0cDaIG%26utm_source%3D%25E6%25AD%25A3%25E5%25BC%258F%25E5%25AE%2598%25E7%25B6%25B2_AOS"
+                target="_self">
+                <img src="img/icon/btn-download-gp.png" alt="Google Play下載" />
+              </a>
+              <a href="https://apps.apple.com/tw/app/%E6%B3%A2%E6%8B%89%E8%A5%BF%E4%BA%9E%E6%88%B0%E8%A8%98/id6451229143"
+                target="_self">
+                <img src="img/icon/btn-download-as.png" alt="Apple Store下載" />
+              </a>
+              <a href="https://warsofprasia.beanfun.com/Download?downloadTarget=1" target="_self">
+                <img src="img/icon/btn-download-pc.png" alt="PC下載" />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+    <div id="plate_page" style="--72516594: 0px; --9617c380: 0px; --cfc4fde0: 0px">
+      <div class="page_events_sunkeeper">
+        <div class="particles" style="opacity: 1">
+          <div id="particle-snow"></div>
+        </div>
+        <nav class="nav_side">
+          <div>
+            <ol>
+              <li class="depth_1">
+                <button class="page_p1">EP.3 生死一瞬</button>
+              </li>
+              <li class="depth_1">
+                <button class="page_p2">紀念更新獎勵</button>
+              </li>
+              <li class="depth_1">
+                <button class="page_p3">新世界：斯拉普耶</button>
+              </li>
+              <li class="depth_1">
+                <button class="page_p4">旅團副本：創造庭園</button>
+              </li>
+              <li class="depth_1">
+                <button class="page_p5">時空縫隙：千年廢墟</button>
+              </li>
+              <li class="depth_1">
+                <button class="page_p6">新系統：精靈</button>
+              </li>
+              <li class="depth_1">
+                <button class="page_p7">新裝備：護臂與胸針</button>
+              </li>
+              <li class="depth_1">
+                <button class="page_p8">預計更新內容</button>
+              </li>
+            </ol>
+          </div>
+        </nav>
+        <div class="section-pages swiper-container">
+          <div class="page-group swiper-wrapper">
+            <div class="swiper-slide swiper-slide-page" data-title="EP.3 生死一瞬">
+              <section class="section_main area" style="transform: translate3d(0px, 0%, 0px)">
+                <div class="visual">
+                  <span class="dimmed"></span>
+                  <video loop="" autoplay="" muted="" playsinline="" class="visible_roomy">
+                    <source src="./img/page1/hero_loop.mp4" type="video/mp4" />
+                  </video>
+                  <video loop="" autoplay="" muted="" playsinline="" class="visible_mobile">
+                    <source src="./img/page1/bg_mobile.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="content">
+                  <div class="content_wrap">
+                    <p class="subtitle"></p>
+                    <h2 class="title"></h2>
+                    <p class="date"></p>
+                    <button class="video-open"></button>
+                    <button class="scroll"></button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div data-title="紀念更新獎勵" class="swiper-slide swiper-slide-page">
+              <section class="section_season area">
+                <div class="visual">
+                  <span class="bg"></span>
+                </div>
+                <div class="content">
+                  <div class="header">
+                    <div class="title"></div>
+                  </div>
+                  <div class="sub_content">
+                    <div class="content_wrap">
+                      <div>
+                        <dl class="reward1">
+                          <button class="reward_btn"></button>
+                        </dl>
+                        <dl class="reward2">
+                          <div class="swiper-container nested-swiper-child1">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <span class="reward2_1"></span>
+                              </div>
+                              <div class="swiper-slide">
+                                <span class="reward2_2"></span>
+                              </div>
+                              <div class="swiper-slide">
+                                <span class="reward2_3"></span>
+                              </div>
+                              <div class="swiper-slide">
+                                <span class="reward2_4"></span>
+                              </div>
+                              <div class="swiper-slide">
+                                <span class="reward2_5"></span>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="swiper-button-next"></div>
+                              <div class="swiper-button-prev"></div>
+                            </div>
+                          </div>
+                        </dl>
+                        <dl class="reward3 visible_mobile">
+                          <div class="swiper-container nested-swiper-child2">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <span class="reward3_1"></span>
+                              </div>
+                              <div class="swiper-slide">
+                                <span class="reward3_2"></span>
+                              </div>
+                              <div class="swiper-slide">
+                                <span class="reward3_3"></span>
+                              </div>
+                            </div>
+                            <div>
+                              <ol>
+                                <li>
+                                  <i class="progress1"></i>
+                                </li>
+                                <li>
+                                  <i class="progress2"></i>
+                                </li>
+                                <li>
+                                  <i class="progress3"></i>
+                                </li>
+                              </ol>
+                            </div>
+                            <div class="swiper-child2-button-next"></div>
+                            <div class="swiper-child2-button-prev"></div>
+                          </div>
+                        </dl>
+                      </div>
+                      <div class="visible_roomy">
+                        <dl class="reward3"></dl>
+                        <dl class="reward4"></dl>
+                        <dl class="reward5"></dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div data-title="新伺服器：斯拉普耶" class="swiper-slide swiper-slide-page">
+              <section class="section_newrealm area">
+                <div class="visual">
+                  <div class="dimmed"></div>
+                </div>
+                <div class="content">
+                  <div class="header">
+                    <div class="title"></div>
+                    <div class="sub_title"></div>
+                  </div>
+                  <div class="sub_content">
+                    <div class="content_wrap"></div>
+                  </div>
+                  <div class="btn_div">
+                    <a href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12231"
+                      rel="noopener noreferrer" target="_blank" class="detail-link">
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div data-title="旅團副本：創造庭園" class="swiper-slide swiper-slide-page">
+              <section class="section_dungeon area">
+                <div class="visual">
+                  <div class="dimmed"></div>
+                </div>
+                <div class="content">
+                  <div class="header" style="margin-bottom: 10px">
+                    <div class="title"></div>
+                    <div class="sub_title"></div>
+                  </div>
+                  <div class="sub_content">
+                    <div class="content_wrap"></div>
+                  </div>
+                  <div class="btn_div">
+                    <a href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12232"
+                      rel="noopener noreferrer" target="_blank" class="detail-link">
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div data-title="時空縫隙：千年廢墟" class="swiper-slide swiper-slide-page">
+              <section class="section_ruin area">
+                <div class="visual">
+                  <span class="bg"></span>
+                  <video loop="" autoplay="" muted="" playsinline="" class="visible_roomy">
+                    <source src="./img/page5/p5_bg_pc.mp4" type="video/mp4" />
+                  </video>
+                  <video loop="" autoplay="" muted="" playsinline="" class="visible_mobile"
+                    style="backface-visibility: hidden;">
+                    <source src="./img/page5/p5_bg_m.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="content">
+                  <div class="header">
+                    <div class="title">
+                      <img src="img/page5/p5_main-msg_m.png" class="visible_mobile"
+                        style="backface-visibility: hidden;" />
+                      <img src="img/page5/p5_main-msg.png" class="visible_roomy" />
+                    </div>
+                  </div>
+                  <div class="sub_content">
+                    <div class="map" style="backface-visibility: hidden;"></div>
+                    <ul class="items" style="backface-visibility: hidden;">
+                      <li class="item item1" style="backface-visibility: hidden;"></li>
+                      <li class="item item2" style="backface-visibility: hidden;"></li>
+                      <li class="item item3" style="backface-visibility: hidden;"></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div data-title="新系統：精靈" class="swiper-slide swiper-slide-page">
+              <section class="section_pet area" style="
+                    transform: translate3d(0px, 0%, 0px);
+                    transition-duration: 0ms;
+                  ">
+                <div class="visual"></div>
+                <div class="content">
+                  <div class="header">
+                    <div class="title"></div>
+                  </div>
+                  <div class="sub_content">
+                    <div class="slider">
+                      <div
+                        class="swiper-container swiper-fade swiper-initialized swiper-horizontal swiper-autoheight swiper-watch-progress swiper-backface-hidden nested-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <span class="n--2"></span>
+                          </div>
+                          <div class="swiper-slide">
+                            <span class="n--1"></span>
+                          </div>
+                        </div>
+                        <button class="swiper-button-prev" tabindex="0" aria-label="Previous slide"></button>
+                        <button class="swiper-button-next" tabindex="0" aria-label="Next slide"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detail" style="height: 100px"></div>
+                </div>
+              </section>
+            </div>
+            <div data-title="新裝備：護臂與胸針" class="swiper-slide swiper-slide-page">
+              <section class="section_equipment area">
+                <div class="visual">
+                  <span class="bg"></span>
+                </div>
+                <div class="content">
+                  <div class="header">
+                    <div class="title"></div>
+                  </div>
+                  <div class="sub_content">
+                    <div class="item item1"></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div data-title="預計更新內容" class="swiper-slide swiper-slide-page">
+              <section class="section_soon area">
+                <div class="visual">
+                  <span class="bg"></span>
+                </div>
+                <div class="content">
+                  <div class="content_wrap">
+                    <div class="header">
+                      <h2 class="title">COMING SOON</h2>
+                    </div>
+                    <div class="sub_content">
+                      <div class="items">
+                        <div class="item item1">
+                          <div class="title">
+                            <p class="t1">時空縫隙3地區</p>
+                            <p class="t2">忘卻古城</p>
+                          </div>
+                        </div>
+                        <div class="item item2">
+                          <div class="title">
+                            <p class="t2">新地區西吉爾</p>
+                          </div>
+                        </div>
+                        <div class="item item3">
+                          <img src="./img/page8/p8_item3_char.png" />
+                          <div class="title">
+                            <p class="t2">職業集中照顧</p>
+                          </div>
+                        </div>
+                        <div class="item item4">
+                          <div class="title">
+                            <p class="t2">以太巨神</p>
+                          </div>
+                        </div>
+                        <div class="item item5">
+                          <div class="title">
+                            <p class="t2">新地區西吉爾</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
