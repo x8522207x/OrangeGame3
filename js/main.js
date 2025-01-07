@@ -197,7 +197,6 @@ $(document).ready(() => {
                     });
                 },
                 slideChange: (swiper) => {
-                    console.log(swiper.realIndex)
                     $('[class*=progress]').removeClass('active');
                     $(`.progress${swiper.realIndex + 1}`).toggleClass('active');
                 }
